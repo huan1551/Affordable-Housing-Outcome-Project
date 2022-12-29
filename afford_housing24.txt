@@ -1,0 +1,292 @@
+"ProjectID" "ProjectName" "Failing" "Status" "Street" "ZipCode" "SupervisorDistrict" "ProjectArea" "ProgramArea" "ProjectType" "HousingTenure" "MarketRate" "StudioUnits" "OneBd" "TwoBd" "ThreeBd" "FourBd" "FiveBd" "FamilyUnit" "SeniorUnit" "TAYUnit" "HomelessUnit" "DisabledUnit" "LOSPUnit" "PublicHousing" "Proceed" "daysProceed" "ProjUnits"
+"1" "2006-002" "Midtown Park Apartments" 0 "(1) Preliminary Phase" "Scott" 94115 5 "0" "Multifamily" "Rehabilitation" "Rental" 0 0 24 55 60 0 0 139 0 0 0 0 0 0 2020-01-01 -384 139
+"2" "2011-003" "801 Brannan (Land Dedication Site)" 0 "(1) Preliminary Phase" "7th " 94103 6 "0" "Multifamily" "New Construction" "Rental" 1 0 0 0 0 0 0 149 0 0 0 0 0 0 NA NA 150
+"3" "2015-001" "4th and Folsom" 0 "(1) Preliminary Phase" "4th" 94103 6 "0" "Multifamily" "New Construction" "Rental" 1 0 0 0 0 0 0 84 0 0 9 0 0 0 2019-09-15 -492 85
+"4" "2016-026" "HPSY, Block 1 (Hilltop)" 1 "(1) Preliminary Phase" "Address not yet assigned" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 216 0 0 0 0 0 0 24 0 0 0 0 0 0 NA NA 240
+"5" "2016-057" "101 Hyde" 0 "(1) Preliminary Phase" "Hyde" 94102 6 "0" "Multifamily" "New Construction" "Rental" 1 0 0 0 0 0 0 84 0 0 0 0 0 0 NA NA 85
+"6" "2016-085" "Mission Bay South Block 9" 0 "(1) Preliminary Phase" "China Basin" 94158 6 "Mission Bay" "Multifamily" "New Construction" "Rental" 1 98 1 0 0 0 0 98 0 0 124 0 124 0 2018-05-01 -994 99
+"7" "2016-088" "Transbay Block 2 West" 0 "(1) Preliminary Phase" "Address not yet assigned" 94105 6 "Transbay" "Multifamily" "New Construction" "Rental" 1 0 0 0 0 0 0 77 0 0 0 0 0 0 NA NA NA
+"8" "2016-089" "Transbay Block 2 East" 0 "(1) Preliminary Phase" "Address not yet assigned" 94105 6 "Transbay" "Multifamily" "New Construction" "Rental" 2 0 0 0 0 0 0 167 0 0 0 0 0 0 NA NA 169
+"9" "2016-090" "Mission Bay South 4 East" 0 "(1) Preliminary Phase" "Address not yet assigned" 94158 6 "Mission Bay" "Multifamily" "New Construction" "Rental" 1 0 0 0 0 0 0 100 0 0 0 0 0 0 NA NA 101
+"10" "2016-091" "HPSY I, Block 48 (OCII 1)" NA "(1) Preliminary Phase" "La Salle" 94124 10 "HP Shipyard Phase 1" "Multifamily" "New Construction" "Unknown" 1 0 0 0 0 0 0 38 0 0 0 0 0 0 NA NA 39
+"11" "2016-092" "HPSY I, Block 48 (OCII 2)" 0 "(1) Preliminary Phase" "Oakdale" 94124 10 "HP Shipyard Phase 1" "Multifamily" "New Construction" "Unknown" 1 0 0 0 0 0 0 45 0 0 0 0 0 0 NA NA 46
+"12" "2016-093" "Mission Bay South Block 9A" 0 "(1) Preliminary Phase" "Address not yet assigned" 94158 6 "Mission Bay" "Multifamily" "New Construction" "Ownership" 1 0 0 0 0 0 0 62 0 0 0 0 0 0 NA NA 63
+"13" "2016-094" "Mission Bay South Block 12 West" 0 "(1) Preliminary Phase" "Address not yet assigned" 94158 6 "Mission Bay" "Multifamily" "New Construction" "Rental" 1 0 0 0 0 0 0 148 0 0 0 0 0 0 NA NA NA
+"14" "2016-095" "HPSY I, Block 56" 0 "(1) Preliminary Phase" "Innes" 94124 10 "HP Shipyard Phase 1" "Multifamily" "New Construction" "Unknown" 0 0 0 0 0 0 0 54 0 0 0 0 0 0 NA NA 54
+"15" "2016-096" "HPSY II-CP, Block 7" 0 "(1) Preliminary Phase" "Address not yet assigned" 94124 10 "Candlestick Point" "Multifamily" "New Construction" "Unknown" 1 0 0 0 0 0 0 59 0 0 0 0 0 0 NA NA 60
+"16" "2016-097" "Transbay Block 12" NA "(1) Preliminary Phase" "Address not yet assigned" 94105 6 "Transbay" "Multifamily" "New Construction" "Unknown" 1 0 0 0 0 0 0 79 0 0 0 0 0 0 NA NA 80
+"17" "2016-098" "HPSY II-CP, Block 2B" 0 "(1) Preliminary Phase" "Address not yet assigned" 94124 10 "Candlestick Point" "Multifamily" "New Construction" "Unknown" 1 0 0 0 0 0 0 129 0 0 0 0 0 0 NA NA 130
+"18" "2016-099" "HPSY II-CP, Block 6B" 0 "(1) Preliminary Phase" "Address not yet assigned" 94124 10 "Candlestick Point" "Multifamily" "New Construction" "Unknown" 1 0 0 0 0 0 0 104 0 0 0 0 0 0 NA NA 105
+"19" "2016-100" "HPSY II-CP, Block 4B" 0 "(1) Preliminary Phase" "Address not yet assigned" 94124 10 "Candlestick Point" "Multifamily" "New Construction" "Unknown" 1 0 0 0 0 0 0 89 0 0 0 0 0 0 NA NA 90
+"20" "2016-101" "HPSY II-CP, Block 5B" 0 "(1) Preliminary Phase" "Address not yet assigned" 94124 10 "Candlestick Point" "Multifamily" "New Construction" "Unknown" 1 0 0 0 0 0 0 109 0 0 0 0 0 0 NA NA 110
+"21" "2016-102" "HPSY II-SY, Block 4B" 0 "(1) Preliminary Phase" "Address not yet assigned" 94124 10 "HP Shipyard Phase 2" "Multifamily" "New Construction" "Unknown" 1 0 0 0 0 0 0 129 0 0 0 0 0 0 NA NA 130
+"22" "2016-103" "HPSY II-SY, Block 10A" 0 "(1) Preliminary Phase" "Address not yet assigned" 94124 10 "HP Shipyard Phase 2" "Multifamily" "New Construction" "Unknown" 1 0 0 0 0 0 0 89 0 0 0 0 0 0 NA NA 90
+"23" "2016-104" "HPSY II-SY, Block 8B" 0 "(1) Preliminary Phase" "Address not yet assigned" 94124 10 "HP Shipyard Phase 2" "Multifamily" "New Construction" "Unknown" 1 0 0 0 0 0 0 134 0 0 0 0 0 0 NA NA 135
+"24" "2016-105" "CP-02" NA "(1) Preliminary Phase" "Address not yet assigned" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 512 0 0 0 0 0 0 58 0 0 0 0 0 0 NA NA 570
+"25" "2016-106" "CP-03, CP-04" 1 "(1) Preliminary Phase" "Address not yet assigned" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 1053 0 0 0 0 0 0 87 0 0 0 0 0 0 NA NA 1140
+"26" "2016-107" "Parcel B (HP02/HP03)" 1 "(1) Preliminary Phase" "Address not yet assigned" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 1271 0 0 0 0 0 0 149 0 0 0 0 0 0 NA NA 1420
+"27" "2016-108" "Transbay Block 4" 0 "(1) Preliminary Phase" "Address not yet assigned" 94105 6 "0" "Inclusionary-OCII" "New Construction" "Rental" 210 0 0 0 0 0 0 270 0 0 0 0 0 0 NA NA NA
+"28" "2017-041" "Hayes Valley HOPE VI" 1 "(1) Preliminary Phase" "Rose" 94102 5 "0" "Multifamily" "Rehabilitation" "Rental" 2 0 16 116 47 13 0 192 0 0 0 0 0 0 NA NA NA
+"29" "2010-003" "Casa de la Mision" 0 "(2) Predevelopment Feasibility" "24th " 94110 9 "0" "Multifamily" "New Construction" "Rental" 1 49 0 0 0 0 0 0 49 0 0 0 0 0 2017-06-01 -1328 50
+"30" "2010-005" "Balboa Park Upper Yard" 0 "(2) Predevelopment Feasibility" "Address not yet assigned" 94112 11 "0" "Multifamily" "New Construction" "Rental" 1 8 16 40 35 0 0 87 0 0 0 28 0 0 2017-10-01 -1206 88
+"31" "2012-005" "Alice Griffith Phase 5 (Blocks 8, 9, 14)" 0 "(2) Predevelopment Feasibility" "Address not yet assigned" 94124 10 "Candlestick Point" "HOPE SF" "New Construction" "Rental" 0 0 0 0 0 30 6 36 0 0 0 0 0 30 2019-01-01 -749 36
+"32" "2012-006" "Alice Griffith Phase 6 (Block 9)" 0 "(2) Predevelopment Feasibility" "Address not yet assigned" 94124 10 "Candlestick Point" "HOPE SF" "New Construction" "Rental" 1 0 131 0 0 0 0 0 131 0 0 0 0 0 2019-05-01 -629 132
+"33" "2013-052" "88 Broadway Family" 0 "(2) Predevelopment Feasibility" "Broadway" 94111 3 "0" "Multifamily" "New Construction" "Rental" 1 14 39 46 25 0 0 124 0 0 25 0 25 0 2018-08-01 -902 NA
+"34" "2013-053" "735 Davis Senior (88 Broadway Senior)" 0 "(2) Predevelopment Feasibility" "Davis " 94111 3 "0" "Multifamily" "New Construction" "Rental" 1 23 29 0 0 0 0 0 52 0 10 0 10 0 2018-08-01 -902 NA
+"35" "2014-019" "Goodwill" 1 "(2) Predevelopment Feasibility" "Mission " 94103 6 "0" "Bonds Only" "New Construction" "Rental" 452 40 29 39 2 0 0 113 0 0 0 0 0 0 2017-11-01 -1175 NA
+"36" "2014-024" "Transbay Block 1" 1 "(2) Predevelopment Feasibility" "Folsom" 94105 6 "0" "Inclusionary-OCII" "New Construction" "Ownership" 236 5 69 201 22 0 18 156 0 0 0 0 0 0 NA NA 316
+"37" "2014-032" "Britton Courts (1250 Sunnydale Ave)" 0 "(2) Predevelopment Feasibility" "Loehr" 94134 10 "0" "Bonds Only" "Rehabilitation" "Rental" 1 0 0 62 21 8 0 91 0 0 0 0 0 0 2017-12-01 -1145 NA
+"38" "2015-002" "Block 48, Phase 1A, Block O" 1 "(2) Predevelopment Feasibility" "La Salle" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 10 0 0 0 1 0 0 1 0 0 0 0 0 0 2017-08-01 -1267 11
+"39" "2015-033" "Sunnydale - 6A" 0 "(2) Predevelopment Feasibility" "Address not yet assigned" 94134 10 "0" "HOPE SF" "New Construction" "Rental" 1 0 8 54 23 0 0 82 0 0 0 0 0 63 2019-06-01 -598 83
+"40" "2015-034" "Sunnydale - 6B" 0 "(2) Predevelopment Feasibility" "Address not yet assigned" 94134 10 "0" "HOPE SF" "New Construction" "Rental" 1 0 8 50 28 0 0 85 0 0 0 0 0 64 2019-06-01 -598 86
+"41" "2015-048" "Block 48, Phase 1A, Block N1" 1 "(2) Predevelopment Feasibility" "La Salle" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 16 0 1 1 0 0 0 2 0 0 0 0 0 0 2017-08-01 -1267 18
+"42" "2015-049" "Block 48, Phase 1A, Block N2" 1 "(2) Predevelopment Feasibility" "La Salle" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 7 0 0 1 0 0 0 1 0 0 0 0 0 0 2017-08-01 -1267 8
+"43" "2015-052" "Dorothy Day Community" 0 "(2) Predevelopment Feasibility" "McAllister" 94102 6 "0" "Bonds Only" "Rehabilitation" "Rental" 1 26 73 0 0 0 0 0 99 0 0 0 0 0 2017-12-01 -1145 NA
+"44" "2015-059" "Frederick Douglas Haynes Apartments" 1 "(2) Predevelopment Feasibility" "Golden Gate" 94115 5 "0" "Multifamily" "Rehabilitation" "Rental" 1 0 26 40 28 9 0 103 0 0 0 0 0 0 NA NA 104
+"45" "2016-002" "HPSY II-CP, Block 10A" 0 "(2) Predevelopment Feasibility" "Address not yet assigned" 94124 10 "Candlestick Point" "Multifamily" "New Construction" "Rental" 1 0 20 58 58 3 1 134 0 5 35 0 0 0 2018-09-01 -871 140
+"46" "2016-003" "HPSY II-CP, Block 11A" 0 "(2) Predevelopment Feasibility" "Address not yet assigned" 94124 10 "Candlestick Point" "Multifamily" "New Construction" "Rental" 1 0 20 59 69 3 1 144 0 5 38 0 0 0 2018-11-15 -796 NA
+"47" "2016-005" "Block 48, Phase 1A, Block P" 1 "(2) Predevelopment Feasibility" "Oakdale" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 9 0 0 1 0 0 0 1 0 0 0 0 0 0 2017-08-01 -1267 10
+"48" "2016-016" "Hunters View Phase III" 0 "(2) Predevelopment Feasibility" "West Point" 94124 10 "0" "HOPE SF" "New Construction" "Rental" 0 0 40 5 15 34 5 54 0 0 0 0 0 0 2019-06-01 -598 54
+"49" "2016-017" "Block 48, Phase 3A, Block H" 1 "(2) Predevelopment Feasibility" "Oakdale" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 12 0 1 1 0 0 0 2 0 0 0 0 0 0 2018-05-01 -994 14
+"50" "2016-018" "Block 48, Phase 3A, Block K" 1 "(2) Predevelopment Feasibility" "Oakdale" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 23 0 2 1 0 0 0 3 0 0 0 0 0 0 2018-05-01 -994 26
+"51" "2016-034" "70-74 Moss" 0 "(2) Predevelopment Feasibility" "Moss" 94103 6 "0" "Multifamily" "Rehabilitation" "Rental" 0 0 4 0 1 0 0 5 0 0 0 0 0 0 2017-06-30 -1299 NA
+"52" "2016-038" "Washburn Hotel" 0 "(2) Predevelopment Feasibility" "Washburn" 94103 6 "0" "Multifamily" "Rehabilitation" "Rental" 0 0 0 0 0 0 0 22 0 0 0 0 0 0 2017-09-01 -1236 NA
+"53" "2016-039" "El Dorado" 0 "(2) Predevelopment Feasibility" "9th" 94103 6 "0" "Multifamily" "Rehabilitation" "Rental" 0 0 0 0 0 0 0 57 0 0 21 0 0 0 2017-09-01 -1236 57
+"54" "2016-040" "Hazel Betsey Apts" 0 "(2) Predevelopment Feasibility" "17th" 94110 8 "0" "Multifamily" "Rehabilitation" "Rental" 0 6 3 0 0 0 0 9 0 0 0 NA 0 0 2017-06-15 -1314 NA
+"55" "2016-041" "Haight  Street Apartments" 0 "(2) Predevelopment Feasibility" "Haight" 94102 5 "0" "Multifamily" "Rehabilitation" "Rental" 5 0 5 2 0 0 0 7 0 0 0 0 0 0 2017-05-15 -1345 12
+"56" "2016-042" "Dalt Hotel" 0 "(2) Predevelopment Feasibility" "Turk" 94102 6 "0" "Multifamily" "Rehabilitation" "Rental" 0 0 0 0 0 0 0 178 0 0 1 0 0 0 2017-05-12 -1348 178
+"57" "2016-043" "2782-2786 24th" 0 "(2) Predevelopment Feasibility" "24th" 94110 9 "0" "Multifamily" "Rehabilitation" "Rental" 0 0 1 0 2 0 0 3 0 0 0 0 0 0 2017-07-15 -1284 3
+"58" "2016-045" "Block 48, Phase 2A, Block F" 1 "(2) Predevelopment Feasibility" "La Salle" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 34 0 1 5 0 0 0 6 0 0 0 0 0 0 2018-01-01 -1114 40
+"59" "2016-046" "Block 48, Phase 2A, Block J" 1 "(2) Predevelopment Feasibility" "La Salle" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 34 0 2 4 0 0 0 6 0 0 0 0 0 0 2018-01-01 -1114 40
+"60" "2016-047" "Block 48, Phase 2A, Block M" NA "(2) Predevelopment Feasibility" "La Salle" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 34 0 2 4 0 0 0 6 0 0 0 0 0 0 2018-01-01 -1114 40
+"61" "2016-058" "HPSY, Block 52 (Inclusionary)" 1 "(2) Predevelopment Feasibility" "Friedell" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 65 0 0 0 0 0 0 9 0 0 0 0 0 0 2018-03-01 -1055 74
+"62" "2016-059" "Block 48, Phase 2A, Block B" 1 "(2) Predevelopment Feasibility" "La Salle" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 38 0 3 2 1 0 0 6 0 0 0 0 0 0 2018-01-01 -1114 44
+"63" "2016-060" "Block 48, Phase 2B, Block E" NA "(2) Predevelopment Feasibility" "Oakdale" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 13 0 0 2 0 0 0 2 0 0 0 0 0 0 2018-06-01 -963 15
+"64" "2016-061" "Block 48, Phase 2B, Block I" 1 "(2) Predevelopment Feasibility" "Oakdale" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 19 0 2 1 0 0 0 3 0 0 0 0 0 0 2018-06-01 -963 22
+"65" "2016-062" "Block 48, Phase 2B, Block L" 1 "(2) Predevelopment Feasibility" "Oakdale" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 13 0 1 1 0 0 0 2 0 0 0 0 0 0 2018-06-01 -963 15
+"66" "2016-065" "HPSY I, Block 52 & 54" 0 "(2) Predevelopment Feasibility" "Friedell" 94124 10 "HP Shipyard Phase 1" "Multifamily" "New Construction" "Rental" 1 0 0 0 0 0 0 99 0 0 0 0 0 0 2019-07-01 -568 100
+"67" "2016-068" "4840 Mission" 0 "(2) Predevelopment Feasibility" "Mission " 94112 11 "0" "Multifamily" "New Construction" "Rental" 1 7 50 46 10 0 0 113 0 0 23 0 0 0 2019-06-30 -569 114
+"68" "2016-070" "500 Turk" 0 "(2) Predevelopment Feasibility" "Turk" 94102 6 "0" "Multifamily" "New Construction" "Rental" 1 21 31 42 14 0 0 121 0 0 22 0 0 0 2018-10-15 -827 122
+"69" "2016-071" "1990 Folsom" 0 "(2) Predevelopment Feasibility" "Folsom" 94103 9 "0" "Multifamily" "New Construction" "Rental" 1 24 47 61 10 0 0 142 0 0 29 0 29 0 2019-06-01 -598 143
+"70" "2016-074" "Mission Bay South 6 West" 0 "(2) Predevelopment Feasibility" "Mission Bay Blvd North" 94158 6 "Mission Bay" "Multifamily" "New Construction" "Rental" 1 0 35 70 35 0 0 140 0 0 0 0 0 35 2019-01-15 -735 NA
+"71" "2016-080" "681 Florida (2070 Bryant)" 0 "(2) Predevelopment Feasibility" "Florida" 94110 9 "0" "Multifamily" "New Construction" "Rental" 1 44 31 38 17 0 0 129 0 0 39 0 39 0 2019-05-01 -629 NA
+"72" "2016-081" "Block 48, Phase 1B, Block A" 1 "(2) Predevelopment Feasibility" "La Salle" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 12 0 2 2 0 0 0 4 0 0 0 0 0 0 2018-03-01 -1055 16
+"73" "2016-082" "Block 48, Phase 1B, Block G" 1 "(2) Predevelopment Feasibility" "La Salle" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 31 0 1 2 0 0 0 3 0 0 0 0 0 0 2018-03-01 -1055 34
+"74" "2016-086" "Block 48, Phase 3B, Block D" 1 "(2) Predevelopment Feasibility" "Oakdale" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 10 0 2 0 0 0 0 2 0 0 0 0 0 0 2018-10-01 -841 12
+"75" "2016-087" "Block 48, Phase 3B, Block Q" 1 "(2) Predevelopment Feasibility" "Oakdale" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 33 0 4 2 0 0 0 6 0 0 0 0 0 0 2018-10-01 -841 39
+"76" "2017-036" "Treasure Island C3.2 Maceo May Apartments" 1 "(2) Predevelopment Feasibility" "Address not yet assigned" 94130 6 "0" "Multifamily" "New Construction" "Rental" 1 25 46 33 0 0 0 104 0 0 24 0 0 0 NA NA 105
+"77" "2017-037" "Treasure Island C3.1" 1 "(2) Predevelopment Feasibility" "Address not yet assigned" 94130 6 "0" "Multifamily" "New Construction" "Rental" 1 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 182
+"78" "2017-038" "Octavia Blvd Parcels R, S and U" NA "(2) Predevelopment Feasibility" "Octavia " 94102 5 "0" "Multifamily" "New Construction" "Rental" 1 30 22 30 6 0 0 55 0 30 30 0 30 0 NA NA 88
+"79" "2017-039" "1068 Mission" 1 "(2) Predevelopment Feasibility" "Mission " 94103 6 "0" "Multifamily" "New Construction" "Rental" 0 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 0
+"80" "2017-040" "Francis Scott Key Annex" 1 "(2) Predevelopment Feasibility" "42nd" 94122 4 "0" "Multifamily" "New Construction" "Rental" 1 0 25 49 26 0 0 100 0 0 0 0 0 0 NA NA 101
+"81" "2017-042" "Bernal Dwellings HOPE VI" 1 "(2) Predevelopment Feasibility" "Kamille " 94110 9 "0" "Multifamily" "Rehabilitation" "Rental" 1 0 3 84 70 2 0 159 0 0 0 0 0 0 NA NA 160
+"82" "2011-004" "Parkmerced - Phase IA & 1B" 1 "(3) Design with Entitlements Approved" "19th" 94132 7 "0" "Inclusionary" "New Construction" "Unknown" 909 10 21 11 6 0 0 48 0 0 0 0 0 0 NA NA 957
+"83" "2011-034" "Parkmerced - Phase IC & 1D" 1 "(3) Design with Entitlements Approved" "19th" 94132 7 "0" "Inclusionary" "New Construction" "Unknown" 518 0 0 0 0 0 0 27 0 0 0 0 0 0 NA NA 545
+"84" "2011-035" "Parkmerced - Phase 2" 1 "(3) Design with Entitlements Approved" "19th" 94132 7 "0" "Inclusionary" "New Construction" "Unknown" 675 0 0 0 0 0 0 36 0 0 0 0 0 0 NA NA 711
+"85" "2011-036" "Parkmerced - Subsequent Phases" 1 "(3) Design with Entitlements Approved" "19th" 94132 7 "0" "Inclusionary" "New Construction" "Unknown" 3346 0 0 0 0 0 0 176 0 0 0 0 0 0 NA NA 3522
+"86" "2012-008" "1150 16th  (AKA 1208 8th)" 1 "(3) Design with Entitlements Approved" "16th" 94107 10 "0" "Inclusionary" "New Construction" "Ownership" 13 0 1 1 0 0 0 2 0 0 0 0 0 0 NA NA 15
+"87" "2012-012" "376 Castro " 1 "(3) Design with Entitlements Approved" "Castro" 94114 8 "0" "Inclusionary" "New Construction" "Ownership" 21 0 1 2 0 0 0 3 0 0 0 0 0 0 NA NA 24
+"88" "2014-025" "Schlage Project" 1 "(3) Design with Entitlements Approved" "Schlage Project" 94134 10 "0" "Inclusionary" "New Construction" "Unknown" 1511 0 0 0 0 0 0 168 0 0 0 0 0 0 NA NA 1679
+"89" "2015-010" "19-25 Mason  & 2-16 Turk " 1 "(3) Design with Entitlements Approved" "Mason" 94102 6 "0" "Inclusionary" "New Construction" "Unknown" 155 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 155
+"90" "2015-016" "70-72C Belcher" 0 "(3) Design with Entitlements Approved" "Belcher" 94114 8 "0" "Small Sites" "Rehabilitation" "Rental" 0 0 0 5 0 0 0 5 0 0 0 0 0 0 2018-06-15 -949 NA
+"91" "2015-020" "San Francisco Overlook" 1 "(3) Design with Entitlements Approved" "Crestmont" 94131 7 "0" "Inclusionary" "New Construction" "Unknown" 29 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 29
+"92" "2015-023" "Merry-Go-Round House" 0 "(3) Design with Entitlements Approved" "23rd" 94110 9 "0" "Small Sites" "Rehabilitation" "Rental" 0 0 0 0 0 0 0 14 0 0 0 0 0 0 2018-05-15 -980 14
+"93" "2015-036" "925 Mission - \"N-1 Site\"" 1 "(3) Design with Entitlements Approved" "5th" 94103 6 "0" "Inclusionary" "New Construction" "Ownership" 400 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 400
+"94" "2015-037" "925 Mission - \"M-2 Site\"" 1 "(3) Design with Entitlements Approved" "Mission" 94103 6 "0" "Inclusionary" "New Construction" "Rental" 230 0 0 0 0 0 0 58 0 0 0 0 0 0 NA NA NA
+"95" "2015-038" "525 Harrison" 1 "(3) Design with Entitlements Approved" "Harrison" 94105 6 "0" "Inclusionary" "New Construction" "Rental" 180 5 9 11 0 0 0 25 0 0 0 0 0 0 NA NA 205
+"96" "2015-055" "475 Minna" 1 "(3) Design with Entitlements Approved" "Minna" 94103 6 "0" "Inclusionary" "New Construction" "Ownership" 12 0 0 0 0 0 0 3 0 0 0 0 0 0 NA NA 15
+"97" "2016-004" "344-348 Precita" 0 "(3) Design with Entitlements Approved" "Precita" 94110 9 "0" "Small Sites" "Rehabilitation" "Rental" 0 1 1 1 0 0 0 3 0 0 0 0 0 0 2018-05-28 -967 3
+"98" "2016-012" "988 Harrison" 1 "(3) Design with Entitlements Approved" "Harrison" 94107 6 "0" "Inclusionary" "New Construction" "Rental" 88 0 0 0 0 0 0 12 0 0 0 0 0 0 NA NA 100
+"99" "2016-013" "1567 California " 1 "(3) Design with Entitlements Approved" "California" 94109 3 "0" "Inclusionary" "New Construction" "Ownership" 55 1 4 2 1 0 0 8 0 0 0 0 0 0 NA NA 63
+"100" "2016-020" "655 Folsom" 1 "(3) Design with Entitlements Approved" "Folsom" 94107 6 "0" "Inclusionary" "New Construction" "Unknown" 89 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 89
+"101" "2016-022" "430 Eddy" 1 "(3) Design with Entitlements Approved" "Eddy" 94109 6 "0" "Inclusionary" "New Construction" "Ownership" 20 3 0 0 0 0 0 3 0 0 0 0 0 0 NA NA 23
+"102" "2016-028" "1601 Mission" 1 "(3) Design with Entitlements Approved" "Mission" 94103 6 "0" "Inclusionary" "New Construction" "Unknown" 220 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 220
+"103" "2016-030" "462 Green" 0 "(3) Design with Entitlements Approved" "Green" 94133 3 "0" "Small Sites" "Rehabilitation" "Rental" 0 0 0 6 0 0 0 6 0 0 0 0 0 0 2018-06-01 -963 6
+"104" "2016-049" "901 16th" 1 "(3) Design with Entitlements Approved" "16th" 94107 10 "0" "Inclusionary" "New Construction" "Rental" 218 8 17 15 2 0 0 42 0 0 0 0 0 0 NA NA 260
+"105" "2016-050" "1200 17th" 1 "(3) Design with Entitlements Approved" "17th" 94107 10 "0" "Inclusionary" "New Construction" "Rental" 135 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA NA
+"106" "2016-052" "2224 Clement" 1 "(3) Design with Entitlements Approved" "Clement" 94121 1 "0" "Inclusionary" "New Construction" "Unknown" 16 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 16
+"107" "2016-054" "469 Eddy" 1 "(3) Design with Entitlements Approved" "Eddy" 94102 6 "0" "Inclusionary" "New Construction" "Ownership" 24 0 2 2 0 0 0 4 0 0 0 0 0 0 NA NA 28
+"108" "2016-056" "3182-3198 24th" 0 "(3) Design with Entitlements Approved" "24th " 94110 9 "0" "Small Sites" "Rehabilitation" "Rental" 0 4 2 0 2 0 0 8 0 0 0 0 0 0 2018-06-01 -963 8
+"109" "2016-064" "2435-2445 16th " 1 "(3) Design with Entitlements Approved" "16th " 94110 9 "0" "Inclusionary" "New Construction" "Ownership" 45 0 4 3 1 0 0 8 0 0 0 0 0 0 NA NA 53
+"110" "2016-072" "651 Geary " 1 "(3) Design with Entitlements Approved" "Geary" 94102 6 "0" "Inclusionary" "New Construction" "Ownership" 46 1 3 2 0 0 0 6 0 0 0 0 0 0 NA NA 52
+"111" "2016-073" "1740 Market " NA "(3) Design with Entitlements Approved" "Market" 94102 5 "0" "Inclusionary" "New Construction" "Rental" 88 1 5 4 2 0 0 12 0 0 0 0 0 0 NA NA 100
+"112" "2016-079" "1515 South Van Ness " 1 "(3) Design with Entitlements Approved" "South Van Ness Avenue" 94110 9 "0" "Inclusionary" "New Construction" "Rental" 138 10 1 8 0 0 0 19 0 0 0 0 0 0 NA NA 157
+"113" "2016-083" "98 Pennsylvania " 1 "(3) Design with Entitlements Approved" "Pennsylvania Avenue" 94107 10 "0" "Inclusionary" "New Construction" "Rental" 41 1 4 2 0 0 0 7 0 0 0 0 0 0 NA NA 48
+"114" "2016-084" "2675 Folsom " 1 "(3) Design with Entitlements Approved" "Folsom" 94110 9 "0" "Inclusionary" "New Construction" "Rental" 98 4 8 7 0 0 0 19 0 0 0 0 0 0 NA NA 117
+"115" "2016-109" "1001 Van Ness" 1 "(3) Design with Entitlements Approved" "Van Ness" 94109 5 "0" "Inclusionary" "New Construction" "Unknown" 239 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 239
+"116" "2016-110" "1270 Mission" 1 "(3) Design with Entitlements Approved" "Mission" 94103 6 "0" "Inclusionary" "New Construction" "Rental" 235 16 33 12 3 0 0 64 0 0 0 0 0 0 NA NA 299
+"117" "2016-111" "249 Pennsylvania Ave" 1 "(3) Design with Entitlements Approved" "Pennsylvania" 94107 10 "0" "Inclusionary" "New Construction" "Rental" 49 0 0 0 0 0 0 10 0 0 0 0 0 0 NA NA 59
+"118" "2016-112" "524 Howard" NA "(3) Design with Entitlements Approved" "Howard" 94105 6 "0" "Inclusionary" "New Construction" "Rental" 284 0 0 0 0 0 0 50 0 0 0 0 0 0 NA NA NA
+"119" "2016-115" "5 Thomas Mello Circle" NA "(3) Design with Entitlements Approved" "Thomas Mello" 94134 10 "0" "Inclusionary" "New Construction" "Ownership, Rental" 513 0 43 20 9 0 0 72 0 0 0 0 0 0 NA NA 585
+"120" "2016-117" "830 Eddy & 815 Van Ness" 1 "(3) Design with Entitlements Approved" "Eddy & 815 Van Ness" 94109 5 "0" "Inclusionary" "New Construction" "Rental" 108 0 0 0 0 0 0 18 0 0 0 0 0 0 NA NA 126
+"121" "2016-118" "950 Tennessee" 1 "(3) Design with Entitlements Approved" "Tennessee" 94107 10 "0" "Inclusionary" "New Construction" "Unknown" 103 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 103
+"122" "2016-120" "269-271 Richland" 0 "(3) Design with Entitlements Approved" "Richland " 94110 9 "0" "Small Sites" "Rehabilitation" "Rental" 0 3 3 0 0 0 0 6 0 0 0 0 0 0 2018-01-15 -1100 6
+"123" "2017-001" "3800 Mission" 0 "(3) Design with Entitlements Approved" "Mission " 94110 8 "0" "Small Sites" "Rehabilitation" "Rental" 0 1 4 0 0 0 0 5 0 0 0 0 0 0 2018-03-19 -1037 NA
+"124" "2017-006" "35 Fair " 0 "(3) Design with Entitlements Approved" "Fair" 94110 9 "0" "Small Sites" "Rehabilitation" "Rental" 0 0 4 0 0 0 0 4 0 0 0 0 0 0 2018-05-28 -967 4
+"125" "2017-007" "1228 Folsom St" 1 "(3) Design with Entitlements Approved" "Folsom" 94103 6 "0" "Inclusionary" "New Construction" "Ownership" 21 0 2 1 0 0 0 3 0 0 0 0 0 0 NA NA 24
+"126" "2017-008" "667 Folsom St" NA "(3) Design with Entitlements Approved" "Folsom" 94107 6 "0" "Inclusionary" "New Construction" "Unknown" 230 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 230
+"127" "2017-009" "1028 Market St" 1 "(3) Design with Entitlements Approved" "Market" 94102 6 "0" "Inclusionary" "New Construction" "Rental" 161 13 2 8 2 0 0 25 0 0 0 0 0 0 NA NA 186
+"128" "2017-010" "1298 Howard St" 1 "(3) Design with Entitlements Approved" "Howard" 94103 6 "0" "Inclusionary" "New Construction" "Rental" 108 4 5 8 0 0 0 17 0 0 0 0 0 0 NA NA NA
+"129" "2017-011" "555 Howard St" 1 "(3) Design with Entitlements Approved" "Howard" 94105 6 "0" "Inclusionary" "New Construction" "Ownership" 59 0 3 5 2 0 0 10 0 0 0 0 0 0 NA NA 69
+"130" "2017-014" "19 Precita" 0 "(3) Design with Entitlements Approved" "Precita" 94110 9 "0" "Small Sites" "Rehabilitation" "Rental" 0 0 0 0 3 0 0 3 0 0 0 0 0 0 2018-05-28 -967 NA
+"131" "2017-015" "495 Cambridge St" 1 "(3) Design with Entitlements Approved" "Cambridge" 94134 9 "0" "Inclusionary" "New Construction" "Ownership" 47 0 0 0 0 0 0 7 0 0 0 0 0 0 NA NA 54
+"132" "2017-016" "349 8th St" 1 "(3) Design with Entitlements Approved" "8th " 94103 6 "0" "Inclusionary" "New Construction" "Ownership" 32 1 3 2 0 0 0 6 0 0 0 0 0 0 NA NA 38
+"133" "2017-018" "519 Ellis St" 1 "(3) Design with Entitlements Approved" "Ellis" 94109 6 "0" "Inclusionary" "New Construction" "Ownership" 18 3 0 0 0 0 0 3 0 0 0 0 0 0 NA NA 21
+"134" "2017-019" "2301 Lombard St" 1 "(3) Design with Entitlements Approved" "Lombard" 94123 2 "0" "Inclusionary" "New Construction" "Unknown" 22 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 22
+"135" "2017-020" "1726-1730 Mission Street" 1 "(3) Design with Entitlements Approved" "Mission" 94103 9 "0" "Inclusionary" "New Construction" "Ownership" 33 0 4 3 0 0 0 7 0 0 0 0 0 0 NA NA 40
+"136" "2017-021" "1540 Market Street" 1 "(3) Design with Entitlements Approved" "Market " 94102 5 "0" "Inclusionary" "New Construction" "Unknown" 304 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 304
+"137" "2017-022" "3353 26th" 0 "(3) Design with Entitlements Approved" "26th" 94110 9 "0" "Small Sites" "Rehabilitation" "Rental" 0 3 6 1 0 0 0 10 0 0 0 0 0 0 2018-06-11 -953 10
+"138" "2017-023" "301 6th Street" 1 "(3) Design with Entitlements Approved" "6th " 94107 6 "0" "Inclusionary" "New Construction" "Rental" 82 3 5 5 0 0 0 13 0 0 0 0 0 0 NA NA 95
+"139" "2017-024" "980 Folsom St" 1 "(3) Design with Entitlements Approved" "Folsom" 94103 6 "0" "Inclusionary" "New Construction" "Ownership" 29 0 2 2 0 0 0 4 0 0 0 0 0 0 NA NA 33
+"140" "2017-025" "975 Bryant St" 1 "(3) Design with Entitlements Approved" "Bryant" 94103 6 "0" "Inclusionary" "New Construction" "Rental" 155 6 12 10 2 0 0 30 0 0 0 0 0 0 NA NA 185
+"141" "2017-026" "342-360 5th St" 1 "(3) Design with Entitlements Approved" "5th" 94107 6 "0" "Inclusionary" "New Construction" "Ownership" 109 4 6 5 3 0 0 18 0 0 0 0 0 0 NA NA 127
+"142" "2017-027" "1629 Market St" 1 "(3) Design with Entitlements Approved" "Market " 94103 6 "0" "Inclusionary" "New Construction" "Rental" 426 0 0 0 0 0 0 158 0 0 0 0 0 0 NA NA 584
+"143" "2017-028" "888 Tennessee St" 1 "(3) Design with Entitlements Approved" "Tennessee" 94107 10 "0" "Inclusionary" "New Construction" "Ownership" 93 3 7 6 1 0 0 17 0 0 0 0 0 0 NA NA 110
+"144" "2017-029" "2444 Lombard St" 1 "(3) Design with Entitlements Approved" "Lombard" 94123 2 "0" "Inclusionary" "New Construction" "Ownership" 35 0 2 4 0 0 0 6 0 0 0 0 0 0 NA NA 41
+"145" "2017-030" "2670 Geary Blvd" 1 "(3) Design with Entitlements Approved" "Geary" 94118 2 "0" "Inclusionary" "New Construction" "Rental" 73 15 0 7 0 0 0 22 0 0 0 0 0 0 NA NA 95
+"146" "2017-031" "2918 Mission St" 1 "(3) Design with Entitlements Approved" "Mission " 94110 9 "0" "Inclusionary" "New Construction" "Rental" 67 2 3 3 0 0 0 8 0 0 0 0 0 0 NA NA 75
+"147" "2017-032" "230 7th St" 1 "(3) Design with Entitlements Approved" "7th" 94103 6 "0" "Inclusionary" "New Construction" "Rental" 35 0 3 2 0 0 0 5 0 0 0 0 0 0 NA NA 40
+"148" "2017-033" "793 South Van Ness " 1 "(3) Design with Entitlements Approved" "South Van Ness" 94110 9 "0" "Inclusionary" "New Construction" "Rental" 64 0 7 4 0 0 0 11 0 0 0 0 0 0 NA NA 75
+"149" "2017-034" "2465 Van Ness Ave" 1 "(3) Design with Entitlements Approved" "Van Ness" 94123 2 "0" "Inclusionary" "New Construction" "Unknown" 41 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 41
+"150" "2017-035" "3601 Lawton St" 1 "(3) Design with Entitlements Approved" "Lawton" 94122 4 "0" "Inclusionary" "New Construction" "Ownership" 9 0 0 0 3 0 0 3 0 0 0 0 0 0 NA NA 12
+"151" "2018-001" "1965 Market St" NA "(3) Design with Entitlements Approved" "Market " 94103 0 "0" "Inclusionary" "New Construction" "Ownership, Rental" 82 0 0 0 0 0 0 14 0 0 0 0 0 0 NA NA 96
+"152" "2018-002" "229 Ellis Street
+" 1 "(3) Design with Entitlements Approved" "Ellis" 94102 0 "0" "Inclusionary" "New Construction" "Rental" 52 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 52
+"153" "2018-003" "135 Hyde Street
+" 1 "(3) Design with Entitlements Approved" "Hyde" 94102 0 "0" "Inclusionary" "New Construction" "Rental" 59 0 9 1 0 0 0 10 0 0 0 0 0 0 NA NA NA
+"154" "2018-006" "2293 Powell St" 1 "(3) Design with Entitlements Approved" "Powell " 94133 0 "0" "Inclusionary" "New Construction" "Rental" 15 0 1 1 0 0 0 2 0 0 0 0 0 0 NA NA 17
+"155" "2006-005" "Trinity Plaza Apartments, Phase IV" 1 "(4) Site Work Permit Issued" "Market" 94103 6 "0" "Inclusionary" "New Construction" "Rental" 419 0 0 0 0 0 0 74 0 0 0 0 0 0 NA NA 493
+"156" "2008-004" "5050 Mission  " 1 "(4) Site Work Permit Issued" "Mission" 94112 11 "0" "Inclusionary" "New Construction" "Rental" 52 0 4 4 1 0 0 9 0 0 0 0 0 0 NA NA 61
+"157" "2009-002" "180 Jones  / 181 Turk " 1 "(4) Site Work Permit Issued" "Jones" 94102 6 "0" "Inclusionary" "New Construction" "Ownership" 33 0 2 2 0 0 0 4 0 0 0 0 0 0 NA NA 37
+"158" "2009-006" "2060 Folsom (17th and Folsom)" 0 "(4) Site Work Permit Issued" "Folsom" 94110 9 "0" "Multifamily" "New Construction" "Rental" 1 22 15 47 42 0 0 103 0 23 29 0 29 0 2018-07-01 -933 127
+"159" "2013-016" "2290 3rd " 1 "(4) Site Work Permit Issued" "03rd" 94107 10 "0" "Inclusionary" "New Construction" "Ownership" 71 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 71
+"160" "2013-046" "1950 Mission" 0 "(4) Site Work Permit Issued" "Mission" 94103 9 "0" "Multifamily" "New Construction" "Rental" 1 32 36 73 15 0 0 156 0 0 39 0 0 0 2018-11-01 -810 NA
+"161" "2014-006" "2601 Van Ness " 1 "(4) Site Work Permit Issued" "Van Ness" 94109 2 "0" "Inclusionary" "New Construction" "Unknown" 27 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 27
+"162" "2014-020" "325 Fremont" 1 "(4) Site Work Permit Issued" "Fremont" 94105 6 "0" "Inclusionary" "New Construction" "Unknown" 118 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 118
+"163" "2015-017" "490 South Van Ness " 0 "(4) Site Work Permit Issued" "South Van Ness" 94103 9 "0" "Multifamily" "New Construction" "Rental" 0 0 46 36 7 0 0 89 0 0 27 0 0 0 2018-02-01 -1083 NA
+"164" "2015-019" "1000 Mississippi " 1 "(4) Site Work Permit Issued" "Mississippi" 94107 10 "0" "Inclusionary" "New Construction" "Ownership" 25 0 0 3 0 0 0 3 0 0 0 0 0 0 NA NA 28
+"165" "2015-027" "1700 Market " 1 "(4) Site Work Permit Issued" "Market" 94102 5 "0" "Inclusionary" "New Construction" "Ownership" 37 0 0 0 0 0 0 5 0 0 0 0 0 0 NA NA 42
+"166" "2015-035" "75 Howard " 1 "(4) Site Work Permit Issued" "Howard" 94105 6 "0" "Inclusionary" "New Construction" "Unknown" 133 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 133
+"167" "2015-062" "25 Grace" 1 "(4) Site Work Permit Issued" "Grace" 94103 0 "0" "Inclusionary" "New Construction" "Unknown" 11 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 11
+"168" "2015-063" "37 Grace" 1 "(4) Site Work Permit Issued" "Grace" 94103 0 "0" "Inclusionary" "New Construction" "Unknown" 11 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 11
+"169" "2016-006" "950 Gough" 1 "(4) Site Work Permit Issued" "Gough" 94102 5 "0" "Inclusionary" "New Construction" "Ownership" 84 2 7 2 0 0 0 11 0 0 0 0 0 0 NA NA 95
+"170" "2016-010" "2238-2254 Market" 1 "(4) Site Work Permit Issued" "Market" 94114 8 "0" "Inclusionary" "New Construction" "Rental" 40 2 1 2 0 0 0 5 0 0 0 0 0 0 NA NA NA
+"171" "2016-031" "Swiss American" 0 "(4) Site Work Permit Issued" "Broadway" 94133 3 "0" "Multifamily" "Rehabilitation" "Rental" 1 0 0 0 0 0 0 65 0 0 0 0 0 0 2017-06-01 -1328 66
+"172" "2016-032" "Garden Court Apartments" 0 "(4) Site Work Permit Issued" "15th " 94103 9 "0" "Multifamily" "Rehabilitation" "Rental" 0 10 6 0 0 0 0 16 0 0 0 0 0 0 2017-06-30 -1299 16
+"173" "2016-033" "3434 18th " NA "(4) Site Work Permit Issued" "18th" 94110 9 "0" "Multifamily" "Rehabilitation" "Rental" 0 6 2 0 0 0 0 8 0 0 0 0 0 0 2017-07-15 -1284 8
+"174" "2016-035" "2943-2947 16th" NA "(4) Site Work Permit Issued" "16th " 94103 9 "0" "Multifamily" "Rehabilitation" "Rental" 0 0 8 0 0 0 0 8 0 0 0 0 0 0 2017-07-15 -1284 NA
+"175" "2016-036" "Dudley Apartments" 0 "(4) Site Work Permit Issued" "6th " 94103 6 "0" "Multifamily" "Rehabilitation" "Rental" 1 25 24 0 0 0 0 74 0 0 25 0 0 0 2017-10-01 -1206 75
+"176" "2016-044" "890-896 Capp" 0 "(4) Site Work Permit Issued" "Capp" 94110 9 "0" "Multifamily" "Rehabilitation" "Rental" 0 0 1 2 1 0 0 4 0 0 0 0 0 0 2017-06-30 -1299 4
+"177" "2016-053" "3701 Noriega" 1 "(4) Site Work Permit Issued" "Noriega" 94122 4 "0" "Inclusionary" "New Construction" "Unknown" 12 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 12
+"178" "2016-076" "390 1st  " 1 "(4) Site Work Permit Issued" "1st" 94105 6 "0" "Inclusionary" "New Construction" "Rental" 158 7 6 8 1 0 0 22 0 0 0 0 0 0 NA NA 180
+"179" "2016-078" "2600 Harrison" 1 "(4) Site Work Permit Issued" "Harrison" 94110 9 "0" "Inclusionary" "New Construction" "Unknown" 19 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 19
+"180" "2016-114" "950 Market" 1 "(4) Site Work Permit Issued" "Market" 94102 6 "0" "Inclusionary" "New Construction" "Unknown" 242 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 242
+"181" "2016-122" "1335 Larkin St" 1 "(4) Site Work Permit Issued" "Larkin" 94109 0 "0" "Inclusionary" "New Construction" "Rental" 22 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 22
+"182" "2006-001" "1036 Mission" 0 "(5) First Construction Document Issued" "Mission" 94103 6 "0" "Multifamily" "New Construction" "Rental" 0 0 37 38 7 0 0 83 0 0 40 0 40 0 2016-09-01 -1601 83
+"183" "2007-003" "Eddy & Taylor" 0 "(5) First Construction Document Issued" "Taylor" 94102 6 "0" "Multifamily" "New Construction" "Rental" 1 16 14 67 15 0 0 112 0 0 30 5 30 0 2017-06-06 -1323 113
+"184" "2008-006" "95 Laguna" 0 "(5) First Construction Document Issued" "Laguna" 94102 8 "0" "Multifamily" "New Construction" "Rental" 1 40 36 2 0 0 0 15 63 0 15 0 15 0 2017-07-01 -1298 79
+"185" "2008-007" "2800 Sloat Boulevard" NA "(5) First Construction Document Issued" "Sloat" 94116 4 "0" "Inclusionary" "New Construction" "Ownership" 49 0 2 5 0 0 0 7 0 0 0 0 0 0 NA NA 56
+"186" "2008-008" "1 Stanyan" NA "(5) First Construction Document Issued" "Stanyan" 94118 1 "0" "Inclusionary" "New Construction" "Unknown" 13 0 0 0 0 0 0 0 0 0 0 0 0 0 2016-12-22 -1489 13
+"187" "2011-005" "1255-1275 Columbus" 1 "(5) First Construction Document Issued" "Columbus" 94133 2 "0" "Inclusionary" "New Construction" "Unknown" 20 0 0 0 0 0 0 0 0 0 0 0 0 0 2016-12-07 -1504 20
+"188" "2011-015" "1296 Shotwell" 0 "(5) First Construction Document Issued" "Shotwell" 94110 9 "0" "Multifamily" "New Construction" "Rental" 1 24 69 0 0 0 0 19 74 0 19 0 19 0 2018-02-01 -1083 94
+"189" "2011-020" "25-35 Dolores " 1 "(4) Site Work Permit Issued" "Dolores" 94103 0 "0" "Inclusionary" "New Construction" "Ownership" 33 0 1 3 0 0 0 4 0 0 0 0 0 0 NA NA 37
+"190" "2012-003" "Alice Griffith Phase 3A-3B  (Block 1)" 0 "(5) First Construction Document Issued" "Arelious Walker" 94124 10 "Candlestick Point" "HOPE SF" "New Construction" "Rental" 0 0 13 71 35 3 0 122 0 0 0 0 0 93 2016-02-29 -1786 NA
+"191" "2012-004" "Alice Griffith Phase 4 (Block 5)" 0 "(5) First Construction Document Issued" "Arelious Walker" 94124 10 "Candlestick Point" "HOPE SF" "New Construction" "Rental" 0 0 12 6 0 10 3 31 0 0 0 0 0 19 2017-05-01 -1359 NA
+"192" "2012-010" "Transbay Block 9" 1 "(5) First Construction Document Issued" "Folsom" 94105 6 "Transbay" "Inclusionary-OCII" "New Construction" "Rental" 436 34 61 14 0 0 0 109 0 0 0 0 0 0 2016-02-16 -1799 545
+"193" "2012-018" "Natalie Gubb Commons (Transbay Block 7 )" 0 "(5) First Construction Document Issued" "Beale" 94105 6 "Transbay" "Multifamily" "New Construction" "Rental" 1 0 53 44 23 0 0 119 0 0 0 0 0 24 2016-06-15 -1679 120
+"194" "2012-019" "Potrero - Block X" 0 "(5) First Construction Document Issued" "Connecticut" 94107 10 "0" "HOPE SF" "New Construction" "Rental" 1 2 10 50 9 0 0 71 0 0 0 0 0 53 2017-01-17 -1463 72
+"195" "2012-020" "455 Fell St (Parcel O)" 0 "(5) First Construction Document Issued" "Fell" 94102 5 "0" "Multifamily" "New Construction" "Rental" 1 1 57 41 8 0 0 107 0 0 33 0 33 0 2017-07-01 -1298 NA
+"196" "2012-021" "L Seven" NA "(5) First Construction Document Issued" "Harrison" 94103 6 "0" "Inclusionary" "New Construction" "Rental" 348 5 32 25 0 0 0 62 0 0 0 0 0 0 NA NA NA
+"197" "2012-022" "181 Fremont" 1 "(5) First Construction Document Issued" "Fremont" 94107 6 "0" "Inclusionary" "New Construction" "Ownership" 74 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 74
+"198" "2013-002" "1 Henry Adams" 1 "(5) First Construction Document Issued" "Henry Adams" 94103 10 "0" "Inclusionary" "New Construction" "Rental" 239 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 239
+"199" "2013-003" "855 Brannan" 1 "(5) First Construction Document Issued" "Brannan" 94103 6 "0" "Inclusionary" "New Construction" "Rental" 377 11 21 22 1 0 0 55 0 0 0 0 0 0 NA NA 432
+"200" "2013-005" "1731 Powell " NA "(5) First Construction Document Issued" "Powell" 94133 3 "0" "Inclusionary" "New Construction" "Unknown" 19 0 0 0 0 0 0 0 0 0 0 0 0 0 2016-06-30 -1664 NA
+"201" "2013-006" "5400 Geary  " 1 "(5) First Construction Document Issued" "Geary" 94121 1 "0" "Inclusionary" "New Construction" "Ownership" 33 0 1 2 1 0 0 5 0 0 0 0 0 0 NA NA 37
+"202" "2013-008" "706 Mission" 1 "(5) First Construction Document Issued" "Mission" 94103 6 "0" "Inclusionary" "New Construction" "Unknown" 185 0 0 0 0 0 0 0 0 0 0 0 0 0 2017-06-12 -1317 NA
+"203" "2013-014" "1601 Mariposa" 1 "(5) First Construction Document Issued" "Mariposa" 94107 10 "0" "Bonds Only" "New Construction" "Rental" 252 14 22 22 2 0 0 64 0 0 0 0 0 0 2017-08-01 -1267 NA
+"204" "2013-029" "Hunters Point East / West" 0 "(5) First Construction Document Issued" "Kiska" 94124 10 "0" "RAD Phase 1" "Rehabilitation" "Rental" 2 0 17 121 34 29 10 211 0 0 0 0 0 0 2015-11-01 -1906 213
+"205" "2013-034" "1760 Bush" 0 "(5) First Construction Document Issued" "Bush" 94109 5 "0" "RAD Phase 2" "Rehabilitation" "Rental" 1 83 23 1 0 0 0 0 107 0 0 0 0 0 2016-11-07 -1534 108
+"206" "2013-035" "2698 California " NA "(5) First Construction Document Issued" "California" 94115 2 "0" "RAD Phase 2" "Rehabilitation" "Rental" 1 30 8 1 0 0 0 0 39 0 0 0 0 0 2016-11-07 -1534 NA
+"207" "2013-036" "Rosa Parks Apartments" 0 "(5) First Construction Document Issued" "Turk" 94115 5 "0" "RAD Phase 2" "Rehabilitation" "Rental" 1 19 100 83 0 0 0 0 202 0 0 0 0 0 2016-11-07 -1534 203
+"208" "2013-037" "Kennedy Towers (JFK Towers)" 0 "(5) First Construction Document Issued" "Sacramento" 94115 2 "0" "RAD Phase 2" "Rehabilitation" "Rental" 1 76 20 1 0 0 0 0 97 0 0 0 0 0 2016-11-07 -1534 98
+"209" "2013-038" "1750 McAllister" 0 "(5) First Construction Document Issued" "McAllister" 94115 5 "0" "RAD Phase 2" "Rehabilitation" "Rental" 1 75 21 1 0 0 0 0 97 0 0 0 0 0 2016-11-07 -1534 97
+"210" "2013-039" "Clementina Towers" 0 "(5) First Construction Document Issued" "Clementina " 94103 6 "0" "RAD Phase 2" "Rehabilitation" "Rental" 2 226 48 0 0 0 0 0 274 0 0 0 0 0 2016-11-07 -1534 NA
+"211" "2013-040" "Westbrook Apartments" 0 "(5) First Construction Document Issued" "Harbor" 94124 10 "0" "RAD Phase 2" "Rehabilitation" "Rental" 2 0 4 57 116 44 0 221 0 0 0 0 0 0 2016-11-07 -1534 223
+"212" "2013-041" "Westside Courts" 0 "(5) First Construction Document Issued" "Sutter" 94115 5 "0" "RAD Phase 2" "Rehabilitation" "Rental" 1 0 83 24 20 8 0 134 0 0 0 0 0 0 2016-11-07 -1534 NA
+"213" "2013-042" "350 Ellis" 0 "(5) First Construction Document Issued" "Ellis" 94102 6 "0" "RAD Phase 2" "Rehabilitation" "Rental" 0 72 24 0 0 0 0 0 96 0 0 0 0 0 2016-11-07 -1534 96
+"214" "2013-043" "Alemany " 0 "(5) First Construction Document Issued" "Ellsworth" 94110 9 "0" "RAD Phase 2" "Rehabilitation" "Rental" 2 0 7 98 41 2 0 148 0 0 0 0 0 0 2016-11-07 -1534 150
+"215" "2013-044" "Mission Dolores" 0 "(5) First Construction Document Issued" "15th" 94103 8 "0" "RAD Phase 2" "Rehabilitation" "Rental" 1 68 22 0 0 0 0 0 90 0 0 0 0 0 2016-11-07 -1534 91
+"216" "2013-045" "Ping Yuen North" 0 "(5) First Construction Document Issued" "Pacific" 94133 3 "0" "RAD Phase 2" "Rehabilitation" "Rental" 1 46 32 99 22 0 0 199 0 0 0 0 0 0 2016-11-30 -1511 200
+"217" "2013-047" "3850 18th" 0 "(5) First Construction Document Issued" "18th" 94114 8 "0" "RAD Phase 2" "Rehabilitation" "Rental" 1 88 18 0 0 0 0 0 106 0 0 0 0 0 2016-11-07 -1534 107
+"218" "2013-048" "Ping Yuen" 0 "(5) First Construction Document Issued" "Pacific" 94133 3 "0" "RAD Phase 2" "Rehabilitation" "Rental" 1 0 46 91 75 21 0 233 0 0 0 0 0 0 2016-11-30 -1511 234
+"219" "2013-050" "Fulton 555" 1 "(5) First Construction Document Issued" "Fulton" 94118 5 "0" "Inclusionary" "New Construction" "Ownership" 122 3 6 8 0 0 0 17 0 0 0 0 0 0 NA NA 139
+"220" "2013-051" "Transbay Block 8 (Affordable Component)" 0 "(5) First Construction Document Issued" "Fremont" 94105 6 "Transbay" "Multifamily" "New Construction" "Rental" 1 0 39 16 24 0 0 79 0 0 0 0 0 0 2016-12-20 -1491 80
+"221" "2013-054" "Canon Kip Community House" 0 "(5) First Construction Document Issued" "Natoma" 94103 6 "0" "Multifamily" "Rehabilitation" "Rental" 1 81 0 0 0 0 0 103 0 0 103 0 0 0 2016-12-14 -1497 NA
+"222" "2013-063" "1335 Folsom" 1 "(5) First Construction Document Issued" "Folsom" 94103 6 "0" "Inclusionary" "New Construction" "Rental" 46 0 0 0 0 0 0 7 0 0 0 0 0 0 NA NA 53
+"223" "2014-002" "626 Mission Bay Family Housing (Mission Bay South 6 East)" 0 "(5) First Construction Document Issued" "Mission Bay Blvd North" 94158 6 "Mission Bay" "Multifamily" "New Construction" "Rental" 1 0 53 46 43 0 0 142 0 0 29 0 0 0 2016-08-01 -1632 143
+"224" "2014-003" "Transbay Block 8" 1 "(5) First Construction Document Issued" "Fremont" 94105 6 "0" "Inclusionary-OCII" "New Construction" "Rental" 398 20 32 18 0 0 0 70 0 0 0 0 0 0 2016-10-28 -1544 468
+"225" "2014-008" "Transbay Block 1 (Affordable Project)" 0 "(5) First Construction Document Issued" "Folsom" 94105 6 "Transbay" "Multifamily" "New Construction" "Ownership" 0 0 42 19 15 0 0 156 0 0 0 0 0 0 2016-11-01 -1540 NA
+"226" "2014-010" "O&M" 1 "(5) First Construction Document Issued" "Indiana" 94107 10 "0" "Inclusionary" "New Construction" "Rental" 95 5 4 6 1 0 0 16 0 0 0 0 0 0 NA NA NA
+"227" "2014-015" "1433 Bush " 1 "(5) First Construction Document Issued" "Bush" 94109 3 "0" "Inclusionary" "New Construction" "Ownership" 34 2 2 0 2 0 0 6 0 0 0 0 0 0 2018-03-22 -1034 NA
+"228" "2014-017" "119 7th " 1 "(5) First Construction Document Issued" "7th" 94103 6 "0" "Inclusionary" "New Construction" "Unknown" 39 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 39
+"229" "2014-018" "580 Hayes  " 1 "(5) First Construction Document Issued" "Hayes" 94102 5 "0" "Inclusionary" "New Construction" "Unknown" 29 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 29
+"230" "2014-028" "815-825 Tennessee" 1 "(5) First Construction Document Issued" "Tennessee" 94107 10 "0" "Inclusionary" "New Construction" "Ownership" 59 0 4 5 1 0 0 10 0 0 0 0 0 0 NA NA 69
+"231" "2015-003" "800 Indiana" 1 "(5) First Construction Document Issued" "Indiana" 94107 10 "0" "Inclusionary" "New Construction" "Unknown" 326 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 326
+"232" "2015-007" "Mission Bay South 3 East" 0 "(5) First Construction Document Issued" "3rd" 94158 6 "0" "Multifamily" "New Construction" "Rental" 1 12 55 30 21 0 0 118 0 0 62 0 0 0 2017-11-28 -1148 119
+"233" "2015-009" "150 Van Ness " 1 "(5) First Construction Document Issued" "Van Ness" 94102 6 "0" "Inclusionary" "New Construction" "Rental" 370 3 27 18 2 0 0 50 0 0 0 0 0 0 NA NA 420
+"234" "2015-011" "777 Tennessee" 1 "(5) First Construction Document Issued" "Tennessee" 94107 10 "0" "Inclusionary" "New Construction" "Ownership" 51 0 5 2 1 0 0 8 0 0 0 0 0 0 2017-10-17 -1190 59
+"235" "2015-015" "1353-1357 Folsom" 0 "(5) First Construction Document Issued" "Folsom" 94103 6 "0" "Small Sites" "Rehabilitation" "Rental" 0 0 0 1 1 1 0 3 0 0 0 0 0 0 2016-10-21 -1551 3
+"236" "2015-018" "1238 Sutter  " 1 "(5) First Construction Document Issued" "Sutter" 94109 3 "0" "Inclusionary" "New Construction" "Ownership" 33 1 1 2 0 0 0 4 0 0 0 0 0 0 2016-11-30 -1511 37
+"237" "2015-022" "901 Tennessee" 1 "(5) First Construction Document Issued" "Tennessee" 94107 10 "0" "Inclusionary" "New Construction" "Ownership" 38 0 3 2 1 0 0 6 0 0 0 0 0 0 2017-12-07 -1139 NA
+"238" "2015-024" "HPSY, Block 56/57" 1 "(5) First Construction Document Issued" "Innes" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 117 0 6 8 1 0 0 15 0 0 0 0 0 0 NA NA 132
+"239" "2015-025" "750 Harrison" 1 "(5) First Construction Document Issued" "Harrison" 94107 6 "0" "Inclusionary" "New Construction" "Rental" 70 0 0 0 0 0 0 9 0 0 0 0 0 0 NA NA 79
+"240" "2015-028" "1546-1564 Market  & 55 Oak" 1 "(5) First Construction Document Issued" "Market" 94102 5 "0" "Inclusionary" "New Construction" "Ownership" 96 1 9 3 0 0 0 13 0 0 0 0 0 0 2017-06-12 -1317 NA
+"241" "2015-042" "HPSY, Block 55 (Inclusionary)" 1 "(5) First Construction Document Issued" "Friedell" 94124 10 "0" "Inclusionary-OCII" "New Construction" "Ownership" 63 0 0 1 2 0 0 3 0 0 0 0 0 0 2018-03-01 -1055 NA
+"242" "2015-043" "1532 Harrison" 1 "(5) First Construction Document Issued" "Harrison" 94103 6 "0" "Inclusionary" "New Construction" "Rental" 114 10 3 9 0 0 0 22 0 0 0 0 0 0 2017-12-01 -1145 136
+"243" "2015-044" "1463 Lombard" 1 "(5) First Construction Document Issued" "Lombard" 94123 2 "0" "Inclusionary" "New Construction" "Ownership" 11 0 3 0 0 0 0 3 0 0 0 0 0 0 2016-12-29 -1482 14
+"244" "2015-045" "363 6th" 1 "(5) First Construction Document Issued" "6th" 94107 6 "0" "Inclusionary" "New Construction" "Rental" 92 3 2 7 0 0 0 12 0 0 0 0 0 0 2018-03-16 -1040 104
+"245" "2015-047" "Sunnydale - Parcel Q" NA "(5) First Construction Document Issued" "Sunnydale" 94134 10 "0" "HOPE SF" "New Construction" "Rental" 1 3 19 18 14 0 0 54 0 0 0 0 0 41 2018-01-01 -1114 55
+"246" "2015-051" "568-570 Natoma " NA "(5) First Construction Document Issued" "Natoma" 94103 6 "0" "Small Sites" "Rehabilitation" "Rental" 0 0 5 0 0 0 0 5 0 0 0 0 0 0 2017-11-15 -1161 NA
+"247" "2015-053" "1395 22nd" 1 "(5) First Construction Document Issued" "22nd" 94110 10 "0" "Inclusionary" "New Construction" "Unknown" 250 0 0 0 0 0 0 0 0 0 0 0 0 0 2017-11-15 -1161 250
+"248" "2015-054" "240 Pacific" 1 "(5) First Construction Document Issued" "Pacific" 94111 3 "0" "Inclusionary" "New Construction" "Unknown" 33 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 33
+"249" "2015-056" "1598 Bay" 1 "(5) First Construction Document Issued" "Bay" 94123 2 "0" "Inclusionary" "New Construction" "Unknown" 28 0 0 0 0 0 0 0 0 0 0 0 0 0 2016-12-13 -1498 28
+"250" "2015-060" "1532 Howard St" 1 "(5) First Construction Document Issued" "Howard" 94103 0 "0" "Inclusionary" "New Construction" "Rental" 15 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA NA
+"251" "2015-061" "1178 Folsom" 1 "(5) First Construction Document Issued" "Folsom" 94103 0 "0" "Inclusionary" "New Construction" "Rental" 42 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 42
+"252" "2016-007" "2177 3rd  (aka 700 Illinois St)" 1 "(5) First Construction Document Issued" "03rd" 94107 10 "0" "Inclusionary" "New Construction" "Ownership" 106 1 4 3 0 0 0 17 0 0 0 0 0 0 2017-12-27 -1119 114
+"253" "2016-008" "St Francis of Assisi" 0 "(5) First Construction Document Issued" "Guerrero" 94103 8 "0" "Bonds Only" "Rehabilitation" "Rental" 1 0 108 2 0 0 0 1 108 0 0 0 0 0 2016-11-01 -1540 110
+"254" "2016-009" "2100 Market " 1 "(5) First Construction Document Issued" "Market" 94114 8 "0" "Inclusionary" "New Construction" "Rental" 53 1 3 3 0 0 0 7 0 0 0 0 0 0 2017-02-24 -1425 NA
+"255" "2016-011" "580 De Haro" 1 "(5) First Construction Document Issued" "De Haro" 94107 10 "0" "Inclusionary" "New Construction" "Unknown" 12 0 0 0 0 0 0 0 0 0 0 0 0 0 2017-01-05 -1475 12
+"256" "2016-019" "88 Arkansas" 1 "(5) First Construction Document Issued" "Arkansas" 94107 10 "0" "Inclusionary" "New Construction" "Rental" 102 5 10 8 2 0 0 25 0 0 0 0 0 0 2018-01-17 -1098 NA
+"257" "2016-021" "1066 Market " 1 "(5) First Construction Document Issued" "Market" 94102 6 "0" "Inclusionary" "New Construction" "Unknown" 304 0 0 0 0 0 0 85 0 0 0 0 0 0 2018-04-24 -1001 304
+"258" "2016-023" "1699 Market " 1 "(5) First Construction Document Issued" "Market" 94103 6 "0" "Inclusionary" "New Construction" "Unknown" 160 0 0 0 0 0 0 0 0 0 0 0 0 0 2017-10-11 -1196 160
+"259" "2016-024" "22 Franklin" 1 "(5) First Construction Document Issued" "Franklin" 94102 5 "0" "Inclusionary" "New Construction" "Rental" 31 1 1 2 0 0 0 4 0 0 0 0 0 0 2016-12-19 -1492 NA
+"260" "2016-027" "875 California" 1 "(5) First Construction Document Issued" "California" 94108 3 "0" "Inclusionary" "New Construction" "Unknown" 44 0 0 0 0 0 0 0 0 0 0 0 0 0 2018-05-08 -987 NA
+"261" "2016-029" "1301 16th" 1 "(5) First Construction Document Issued" "16th" 94103 10 "0" "Inclusionary" "New Construction" "Rental" 144 7 9 10 2 0 0 28 0 0 0 0 0 0 2017-12-18 -1128 NA
+"262" "2016-048" "Oceanwide Center" 1 "(4) Site Work Permit Issued" "1st" 94105 6 "0" "Inclusionary" "New Construction" "Unknown" 265 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 265
+"263" "2016-051" "915 Minna" 1 "(5) First Construction Document Issued" "Minna" 94103 6 "0" "Inclusionary" "New Construction" "Rental" 40 3 1 2 0 0 0 6 0 0 0 0 0 0 2018-03-16 -1040 46
+"264" "2016-055" "2000-2070 Bryant" 1 "(5) First Construction Document Issued" "Bryant" 94110 9 "0" "Inclusionary" "New Construction" "Rental" 196 1 1 1 0 0 0 3 0 0 0 0 0 0 2018-01-25 -1090 199
+"265" "2016-063" "540 De Haro" 1 "(5) First Construction Document Issued" "De Haro" 94107 10 "0" "Inclusionary" "New Construction" "Unknown" 16 0 0 0 0 0 0 0 0 0 0 0 0 0 2018-05-31 -964 16
+"266" "2016-075" "3329-3331 20th" NA "(5) First Construction Document Issued" "20th " 94110 9 "0" "Small Sites" "Rehabilitation" "Rental" 0 4 6 0 0 0 0 10 0 0 0 0 0 0 2017-11-02 -1174 NA
+"267" "2016-113" "345 6th" 1 "(5) First Construction Document Issued" "6th" 94107 6 "0" "Inclusionary" "New Construction" "Rental" 88 0 0 0 0 0 0 14 0 0 0 0 0 0 2017-12-07 -1139 102
+"268" "2016-116" "333 12th" 1 "(5) First Construction Document Issued" "12th" 94103 6 "0" "Inclusionary" "New Construction" "Unknown" 179 0 0 0 0 0 0 21 0 0 0 0 0 0 2018-05-30 -965 200
+"269" "2016-119" "2350 19th " 1 "(5) First Construction Document Issued" "19th" 94107 0 "0" "Inclusionary" "New Construction" "Unknown" 9 0 0 0 1 0 0 1 0 0 0 0 0 0 NA NA 10
+"270" "2016-121" "3620 Cesar Chavez St" 1 "(5) First Construction Document Issued" "Cesar Chavez" 94110 0 "0" "Inclusionary" "New Construction" "Unknown" 24 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 24
+"271" "2017-002" "4042 Fulton" 0 "(5) First Construction Document Issued" "Fulton" 94118 1 "0" "Small Sites" "Rehabilitation" "Rental" 0 0 1 1 3 0 0 5 0 0 0 0 0 0 2017-09-18 -1219 5
+"272" "2017-003" "1015 Shotwell" 0 "(5) First Construction Document Issued" "Shotwell" 94110 9 "0" "Small Sites" "Rehabilitation" "Rental" 0 2 7 1 0 0 0 10 0 0 0 0 0 0 2017-09-13 -1224 NA
+"273" "2017-004" "63-67 Lapidge" 0 "(5) First Construction Document Issued" "Lapidge" 94110 8 "0" "Small Sites" "Rehabilitation" "Rental" 0 0 6 0 0 0 0 6 0 0 0 0 0 0 2018-02-01 -1083 6
+"274" "2017-005" "2217-2221 Mission" 0 "(5) First Construction Document Issued" "Mission " 94110 9 "0" "Small Sites" "Rehabilitation" "Rental" 0 0 7 1 0 0 0 8 0 0 0 0 0 0 2018-05-28 -967 8
+"275" "2017-012" "1500 Mission St" 1 "(5) First Construction Document Issued" "Mission" 94103 6 "0" "Inclusionary" "New Construction" "Rental" 440 40 29 39 2 0 0 110 0 0 0 0 0 0 2018-03-21 -1035 NA
+"276" "2017-017" "719 Larkin St" 1 "(5) First Construction Document Issued" "Larkin" 94109 6 "0" "Inclusionary" "New Construction" "Ownership" 36 0 6 0 0 0 0 6 0 0 0 0 0 0 NA NA 42
+"277" "2018-005" "502 7th St" 1 "(5) First Construction Document Issued" "7th" 94103 0 "0" "Inclusionary" "New Construction" "Unknown" 16 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA NA
+"278" "2010-002" "John Burton Advocates for Youth Housing Complex (at Booker T Washington)" 0 "(6) Complete" "Presidio" 94115 5 "0" "Multifamily" "New Construction" "Rental" 1 48 0 1 0 0 0 24 0 25 25 0 25 0 2015-09-08 -1960 NA
+"279" "2012-013" "The Alchemy by Alta" 1 "(6) Complete" "Buchanan" 94102 8 "0" "Inclusionary" "New Construction" "Rental" 280 12 23 15 0 0 0 50 0 0 0 0 0 0 NA NA NA
+"280" "2012-016" "33 Tehama" 1 "(5) First Construction Document Issued" "Tehama" 94105 6 "0" "Inclusionary" "New Construction" "Rental" 338 7 32 21 0 0 0 49 0 0 0 0 0 0 NA NA 398
+"281" "2013-011" "1490 Ocean " 1 "(6) Complete" "Ocean" 94112 7 "0" "Inclusionary" "New Construction" "Unknown" 15 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 15
+"282" "2013-028" "666 Ellis" 0 "(6) Complete" "Ellis" 94109 6 "0" "RAD Phase 1" "Rehabilitation" "Rental" 0 77 22 0 0 0 0 0 99 0 0 0 0 0 2015-11-01 -1906 NA
+"283" "2013-033" "990 Pacific" 0 "(6) Complete" "Pacific" 94133 3 "0" "RAD Phase 1" "Rehabilitation" "Rental" 1 74 17 0 0 0 0 0 91 0 0 0 0 0 2015-11-01 -1906 NA
+"284" "2014-016" "The Martin" 1 "(6) Complete" "03rd" 94107 10 "0" "Inclusionary" "New Construction" "Rental" 81 4 3 5 0 0 0 12 0 0 0 0 0 0 NA NA 93
+"285" "2014-023" "645 Texas" 1 "(6) Complete" "Texas" 94107 10 "0" "Inclusionary" "New Construction" "Ownership" 80 0 5 6 0 0 0 11 0 0 0 0 0 0 NA NA 91
+"286" "2014-027" "1527-1545 Pine (The Austin)" 1 "(6) Complete" "Pine" 94109 3 "0" "Inclusionary" "New Construction" "Ownership" 88 1 8 3 0 0 0 12 0 0 0 0 0 0 NA NA 100
+"287" "2014-034" "3420 18th " 1 "(6) Complete" "18th" 94110 9 "0" "Inclusionary" "New Construction" "Unknown" 16 0 0 0 0 0 0 0 0 0 0 0 0 0 NA NA 16
+"288" "2015-039" "1198 Valencia" 1 "(6) Complete" "Valencia" 94110 8 "0" "Inclusionary" "New Construction" "Ownership" 43 0 3 3 0 0 0 6 0 0 0 0 0 0 NA NA 49
+"289" "2015-046" "Stage 1075" 1 "(6) Complete" "Market" 94103 6 "0" "Inclusionary" "New Construction" "Ownership" 79 4 6 1 0 0 0 11 0 0 0 0 0 0 NA NA 90

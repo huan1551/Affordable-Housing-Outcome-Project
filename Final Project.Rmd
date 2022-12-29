@@ -1,0 +1,837 @@
+---
+title: "Final Project"
+author: "Zirong Huang"
+date: "4/26/2021"
+output:
+  word_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+# Importing Data
+```{r}
+housing <- read.table("afford_housing24.txt")
+attach(housing)
+```
+
+# Preliminaries
+## Decide Predictors
+```{r}
+table(Status,Failing)
+table(ProgramArea,Failing)
+table(ProgramArea,Failing)
+table(SupervisorDistrict,Failing)
+table(ProjectArea,Failing)
+table(ProgramArea,Failing)
+table(ProjectType,Failing)
+table(HousingTenure,Failing)
+```
+
+## Select Predictors
+```{r}
+selected.housing <- housing[,c(3,11,9,10,12,19,28)]
+##Checking for NA 
+summary(selected.housing)
+```
+
+# First Round
+## Impute missing ProjUnits with its median, adjusting data
+```{r}
+#Original
+original <- selected.housing
+original[119,2] <- "Unknown"
+original[151,2] <- "Unknown"
+original$HousingTenure <- as.factor(original$HousingTenure)
+original$ProgramArea <- as.factor(original$ProgramArea)
+original$ProjectType <- as.factor(original$ProjectType)
+original$Failing <- as.factor(original$Failing)
+#First Round
+first.round <- selected.housing
+first.round$ProjUnits[is.na(selected.housing$ProjUnits)]=median(selected.housing$ProjUnits,na.rm = TRUE)
+first.round <- na.omit(first.round)
+first.round$HousingTenure <- as.factor(first.round$HousingTenure)
+first.round$ProgramArea <- as.factor(first.round$ProgramArea)
+first.round$ProjectType <- as.factor(first.round$ProjectType)
+first.round$Failing <- as.factor(first.round$Failing)
+hist(original$ProjUnits,breaks=60,main="Observed data",
+     xlab="ProjUnits",freq=FALSE)
+hist(first.round$ProjUnits,breaks=60,main="First Round Imputed data",
+     xlab="ProjUnits",freq=FALSE)
+barplot(table(original$Failing),main="Observed data")
+barplot(table(first.round$Failing),main="Imputed data")
+```
+
+## Split Data
+```{r}
+set.seed(4052)
+n <- length(first.round$Failing)
+index <- sample(1:n,0.8*n)
+first.round.train <- first.round[index,]
+first.round.test <- first.round[-index,]
+```
+
+# Logistic Model
+```{r}
+library(alr4)
+log1 <- glm(Failing~., data=first.round.train, family="binomial")
+## deviance test p-value
+pchisq(log1$deviance,200,lower.tail = FALSE)
+##Pearson chi-square test
+Pearson <- sum(residuals(log1,type = "pearson")^2)
+pchisq(Pearson,200,lower.tail = FALSE)
+##Backward Selection
+step(log1)
+##Outlier
+plot(log1,which = 5)
+```
+We are fitting the saturated model, let's do a backward selection
+
+## Model After Selection
+```{r}
+log2 <- glm(formula = Failing ~ ProgramArea + FamilyUnit + ProjUnits, 
+    family = "binomial", data = first.round.train)
+plot(log2,which = 5)
+## deviance test p-value
+pchisq(log2$deviance,204,lower.tail = FALSE)
+##Pearson chi-square test
+Pearson <- sum(residuals(log2,type = "pearson")^2)
+pchisq(Pearson,204,lower.tail = FALSE)
+```
+
+## Tested Out Nested Model
+```{r}
+nest_log <- glm(formula = Failing ~ ProgramArea + FamilyUnit + ProjUnits
+                +I(FamilyUnit^2)+I(ProjUnits^2), family = "binomial",data = 
+                  first.round.train)
+anova(log2,nest_log,test = "Chisq")
+## deviance test p-value
+pchisq(nest_log$deviance,202,lower.tail = FALSE)
+##Pearson chi-square test
+Pearson <- sum(residuals(nest_log,type = "pearson")^2)
+pchisq(Pearson,202,lower.tail = FALSE)
+##Diagnostic Plot
+plot(nest_log,which = 5)
+```
+
+## Test Error Rate & ROC
+```{r}
+#Nested Model
+##Train Error Rate
+y_train<-as.numeric(first.round.train[,1])-1
+y_test<-as.numeric(first.round.test[,1])-1
+pi_logit_train<-predict(nest_log, first.round.train,type="response")
+y_logit_train<-ifelse(pi_logit_train>0.5,1,0)
+ER_logit_train<-mean((y_train-y_logit_train)^2)
+ER_logit_train
+#Training ROC
+library(ROCR)
+pred_logit_train<-prediction(pi_logit_train, y_train)
+perf_logit_train <- performance(pred_logit_train,"tpr","fpr")
+plot(perf_logit_train,colorize=TRUE,main="Nested Logistic Training")
+AUC_logit_train<-performance(pred_logit_train,"auc")@y.values[[1]]
+AUC_logit_train
+
+##Test Error Rate
+pi_logit_test<-predict(nest_log, first.round.test,type="response")
+y_logit_test<-ifelse(pi_logit_test>0.5,1,0)
+ER_logit_test<-mean((y_test-y_logit_test)^2)
+ER_logit_test
+#Testing ROC
+pred_logit_test<-prediction(pi_logit_test, y_test)
+perf_logit_test <- performance(pred_logit_test,"tpr","fpr")
+plot(perf_logit_test,colorize=TRUE,main="Nested Logistic Testing")
+AUC_logit_test<-performance(pred_logit_test,"auc")@y.values[[1]]
+AUC_logit_test
+```
+
+# KNN
+## Transforming data into dummies
+### Training set
+```{r}
+#Project Type
+first.round.train$ProjectType <- as.factor(first.round.train$ProjectType)
+ff<-first.round.train$ProjectType
+ll<-levels(ff)
+X.pt<-rep(0,(dim(first.round.train)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  X.pt<-cbind(X.pt,dummy)
+}
+X.pt<-X.pt[,-1]
+colnames(X.pt) <- c("New Construction","Rehabilitation")
+
+#Program area
+first.round.train$ProgramArea <- as.factor(first.round.train$ProgramArea)
+ff<-first.round.train$ProgramArea  
+ll<-levels(ff)
+X.pa<-rep(0,(dim(first.round.train)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  X.pa<-cbind(X.pa,dummy)
+}
+X.pa<-X.pa[,-1]
+colnames(X.pa) <- c("Bonds Only","HOPE SF","Inclusionary","Inclusionary-OCII","Multifamily"                      ,"RAD Phase 1","RAD Phase 2","Small Sites" )
+
+#Housing Tenure
+first.round.train$HousingTenure <- as.factor(first.round.train$HousingTenure)
+ff<-first.round.train$HousingTenure  
+ll<-levels(ff)
+X.ht<-rep(0,(dim(first.round.train)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  X.ht<-cbind(X.ht,dummy)
+}
+X.ht<-X.ht[,-1]
+colnames(X.ht) <- c("Ownership","Rental","Unknown")
+X.train <- cbind(X.ht,X.pa,X.pt,first.round.train$MarketRate,first.round.train$FamilyUnit,
+                 first.round.train$ProjUnits)
+colnames(X.train)[c(14,15,16)] <- c("MarketRate","FamilyUnit","ProjUnits")
+Failing.train <- first.round.train$Failing
+```
+
+### Testing Set
+```{r}
+#Project Type
+first.round.test$ProjectType <- as.factor(first.round.test$ProjectType)
+ff<-first.round.test$ProjectType
+ll<-levels(ff)
+Z.pt<-rep(0,(dim(first.round.test)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  Z.pt<-cbind(Z.pt,dummy)
+}
+Z.pt<-Z.pt[,-1]
+colnames(Z.pt) <- c("New Construction","Rehabilitation")
+
+#Program area
+first.round.test$ProgramArea <- as.factor(first.round.test$ProgramArea)
+ff<-first.round.test$ProgramArea  
+ll<-levels(ff)
+Z.pa<-rep(0,(dim(first.round.test)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  Z.pa<-cbind(Z.pa,dummy)
+}
+Z.pa<-Z.pa[,-1]
+colnames(Z.pa) <- c("Bonds Only","HOPE SF","Inclusionary","Inclusionary-OCII","Multifamily"                      ,"RAD Phase 1","RAD Phase 2","Small Sites" )
+
+#Housing Tenure
+first.round.test$HousingTenure <- as.factor(first.round.test$HousingTenure)
+ff<-first.round.test$HousingTenure  
+ll<-levels(ff)
+Z.ht<-rep(0,(dim(first.round.test)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  Z.ht<-cbind(Z.ht,dummy)
+}
+Z.ht<-Z.ht[,-1]
+colnames(Z.ht) <- c("Ownership","Rental","Unknown")
+Z.test <- cbind(Z.ht,Z.pa,Z.pt,first.round.test$MarketRate,first.round.test$FamilyUnit,
+                 first.round.test$ProjUnits)
+colnames(Z.test)[c(14,15,16)] <- c("MarketRate","FamilyUnit","ProjUnits")
+```
+
+## Classification
+```{r}
+library(class)
+#K=3
+knn3 <- knn(X.train,Z.test,cl=first.round.train$Failing,k=3)
+table(first.round.test$Failing, knn3)
+##test error
+mean(first.round.test$Failing!=knn3)
+
+#K=5
+knn5 <- knn(X.train,Z.test,cl=first.round.train$Failing,k=5)
+table(first.round.test$Failing, knn5)
+##test error
+mean(first.round.test$Failing!=knn5)
+
+#K=10
+knn10 <- knn(X.train,Z.test,cl=first.round.train$Failing,k=10)
+table(first.round.test$Failing, knn10)
+##test error
+mean(first.round.test$Failing!=knn10)
+
+```
+
+## Cross Validation
+### Transform Variables into Dummies
+```{r}
+#Project Type
+first.round$ProjectType <- as.factor(first.round$ProjectType)
+ff<-first.round$ProjectType
+ll<-levels(ff)
+CV.pt<-rep(0,(dim(first.round)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  CV.pt<-cbind(CV.pt,dummy)
+}
+CV.pt<-CV.pt[,-1]
+colnames(CV.pt) <- c("New Construction","Rehabilitation")
+
+#Program area
+first.round$ProgramArea <- as.factor(first.round$ProgramArea)
+ff<-first.round$ProgramArea  
+ll<-levels(ff)
+CV.pa<-rep(0,(dim(first.round)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  CV.pa<-cbind(CV.pa,dummy)
+}
+CV.pa<-CV.pa[,-1]
+colnames(CV.pa) <- c("Bonds Only","HOPE SF","Inclusionary","Inclusionary-OCII","Multifamily"                      ,"RAD Phase 1","RAD Phase 2","Small Sites" )
+
+#Housing Tenure
+first.round$HousingTenure <- as.factor(first.round$HousingTenure)
+ff<-first.round$HousingTenure  
+ll<-levels(ff)
+CV.ht<-rep(0,(dim(first.round)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  CV.ht<-cbind(CV.ht,dummy)
+}
+CV.ht<-CV.ht[,-1]
+colnames(CV.ht) <- c("Ownership","Rental","Unknown")
+CV.KNN <- cbind(CV.ht,CV.pa,CV.pt,first.round$MarketRate,first.round$FamilyUnit,first.round$ProjUnits)
+colnames(CV.KNN)[c(14,15,16)] <- c("MarketRate","FamilyUnit","ProjUnits")
+```
+
+### Validate
+```{r}
+nfolds=10
+library(caret)
+fold=createFolds(1:nrow(first.round),k=nfolds,list=FALSE)
+kCV_err=rep(0,3)
+for(i in 1:nfolds)
+{
+  pre3.CV=knn(CV.KNN[fold !=i,],CV.KNN[fold ==i,],cl=first.round$Failing[fold!=i],k=3)
+  pre5.CV=knn(CV.KNN[fold !=i,],CV.KNN[fold ==i,],cl=first.round$Failing[fold!=i],k=5)
+  pre10.CV=knn(CV.KNN[fold !=i,],CV.KNN[fold ==i,],cl=first.round$Failing[fold!=i],k=10)
+  kCV_err[1]=kCV_err[1]+mean(pre3.CV!=first.round$Failing[fold==i])/nfolds
+  kCV_err[2]=kCV_err[2]+mean(pre5.CV!=first.round$Failing[fold==i])/nfolds
+  kCV_err[3]=kCV_err[3]+mean(pre10.CV!=first.round$Failing[fold==i])/nfolds
+}
+data.frame(k=c(3,5,10),CV_error=kCV_err)
+```
+ 
+## ROC & AUC
+```{r}
+##Training
+failing_pi_knn_train<-attr(knn(X.train,X.train,first.round.train$Failing,
+                               k=10,prob=TRUE),"prob")
+failing_class <- knn(X.train,X.train,first.round.train$Failing,k=10)
+pi_knn_train<-ifelse(failing_class==1,failing_pi_knn_train,1-failing_pi_knn_train)
+y_knn_train<-ifelse(pi_knn_train>0.5,1,0)
+ER_knn_train<-mean((y_train-y_knn_train)^2)
+ER_knn_train
+pred_knn_train <- prediction(pi_knn_train, y_train)
+perf_knn_train <- performance(pred_knn_train,"tpr","fpr")
+plot(perf_knn_train,colorize=TRUE,main="KNN Train")
+AUC_knn_train<-performance(pred_knn_train,"auc")@y.values[[1]]
+AUC_knn_train
+
+
+##Testing 
+failing_pi_knn_test<-as.numeric(attr(knn(X.train,Z.test,first.round.train$Failing,
+                                         k=10,prob=TRUE),"prob"))
+
+failing_class <- knn(X.train,Z.test,first.round.train$Failing,k=10)
+pi_knn_test<-ifelse(failing_class==1,failing_pi_knn_test,1-failing_pi_knn_test)
+y_knn_test<- ifelse(pi_knn_test>0.5,1,0)
+ER_knn_test<-mean((y_test-y_knn_test)^2)
+ER_knn_test
+pred_knn_test <- prediction(pi_knn_test, y_test)
+perf_knn_test <- performance(pred_knn_test,"tpr","fpr")
+plot(perf_knn_test,colorize=TRUE,main="KNN Test")
+AUC_knn_test<-performance(pred_knn_test,"auc")@y.values[[1]]
+AUC_knn_test
+```
+
+
+# Decision Tree
+```{r}
+first.round.train$Failing <- as.factor(first.round.train$Failing)
+first.round.test$Failing <- as.factor(first.round.test$Failing)
+library(tree)
+tree1 <- tree(Failing~., data = first.round.train)
+plot(tree1)
+text(tree1,pretty=0)
+#Prune
+##cv.tree
+m2 <- cv.tree(tree1,FUN=prune.misclass)
+plot(m2$size, m2$dev, type="b",xlab="Tree Size",ylab="Misclassification error")
+tree2 <- prune.misclass(tree1,best=4)
+plot(tree2)
+text(tree2,pretty=0)
+```
+
+## ROC and AUC
+```{r}
+##Training Error Rate
+pi_dt_train <- predict(tree2,first.round.train)
+y_dt_train <- ifelse(pi_dt_train[,2]>0.5,1,0)
+ER_dt_train<-mean((y_train-y_dt_train)^2)
+ER_dt_train
+#Training ROC
+pred_dt_train<-prediction(pi_dt_train[,2], y_train)
+perf_dt_train <- performance(pred_dt_train,"tpr","fpr")
+plot(perf_dt_train,colorize=TRUE,main="Decision Tree Training")
+AUC_dt_train<-performance(pred_dt_train,"auc")@y.values[[1]]
+AUC_dt_train
+
+##Testing Error Rate
+pi_dt_test <- predict(tree2,first.round.test)
+y_dt_test <- ifelse(pi_dt_test[,2]>0.5,1,0)
+ER_dt_test<-mean((y_test-y_dt_test)^2)
+ER_dt_test
+#Testing ROC
+pred_dt_test<-prediction(pi_dt_test[,2], y_test)
+perf_dt_test <- performance(pred_dt_test,"tpr","fpr")
+plot(perf_dt_test,colorize=TRUE,main="Decision Tree Testing")
+AUC_dt_test<-performance(pred_dt_test,"auc")@y.values[[1]]
+AUC_dt_test
+```
+
+
+# Random Forest
+```{r}
+library(randomForest)
+forest <- randomForest(Failing~., data = first.round.train,mtry = 2,importance=TRUE)
+forest.pred <- predict(forest,first.round.test)
+mean(forest.pred != first.round.test$Failing)
+varImpPlot(forest)
+```
+## Error Rate, ROC & AUC
+```{r}
+##Training Error Rate
+pi_rf_train <- predict(forest,first.round.train, type = "prob")
+y_rf_train <- ifelse(pi_rf_train[,2]>0.5,1,0)
+ER_rf_train<-mean((y_train-y_rf_train)^2)
+ER_rf_train
+#Training ROC
+pred_rf_train<-prediction(pi_rf_train[,2], y_train)
+perf_rf_train <- performance(pred_rf_train,"tpr","fpr")
+plot(perf_rf_train,colorize=TRUE,main="Random Forest Training")
+AUC_rf_train<-performance(pred_rf_train,"auc")@y.values[[1]]
+AUC_rf_train
+
+##Testing Error Rate
+pi_rf_test <- predict(forest,first.round.test, type = "prob")
+y_rf_test <- ifelse(pi_rf_test[,2]>0.5,1,0)
+ER_rf_test<-mean((y_test-y_rf_test)^2)
+ER_rf_test
+#Testing ROC
+pred_rf_test<-prediction(pi_rf_test[,2], y_test)
+perf_rf_test <- performance(pred_rf_test,"tpr","fpr")
+plot(perf_rf_test,colorize=TRUE,main="Random Forest Testing")
+AUC_rf_test<-performance(pred_rf_test,"auc")@y.values[[1]]
+AUC_rf_test
+
+```
+
+# Second Round
+## Second Round Dataset & The original Dataset
+```{r}
+#Second Round
+second.round <- selected.housing
+second.round[119,2] <- "Unknown"
+second.round[151,2] <- "Unknown"
+second.round$HousingTenure <- as.factor(second.round$HousingTenure)
+second.round$ProgramArea <- as.factor(second.round$ProgramArea)
+second.round$ProjectType <- as.factor(second.round$ProjectType)
+second.round$Failing <- as.factor(second.round$Failing)
+```
+
+## First Simply Impute 
+```{r}
+#ProjUnits with its mean
+second.round$ProjUnits[is.na(second.round$ProjUnits)]=mean(second.round$ProjUnits,na.rm = TRUE)
+#Failing with its mode
+second.round$Failing[is.na(second.round$Failing)]="1"
+```
+
+## Iterative Regression
+```{r}
+n_iter = 20
+for(i in 1:n_iter){
+  #Impute ProjUnits given rest
+  m_ProjUnit = lm(ProjUnits~., second.round, subset =! is.na(original$ProjUnits))
+  pred_ProjUnit = predict(m_ProjUnit,second.round[is.na(original$ProjUnits),])
+  second.round$ProjUnits[is.na(original$ProjUnits)] = pred_ProjUnit
+  #Impute Failings given rest
+  m_Failing = glm(Failing~., second.round, subset =! is.na(original$Failing)
+                 ,family="binomial")
+  pred_Failing = predict(m_Failing,second.round[is.na(original$Failing),], 
+                         type = "response")
+  second.round$Failing[is.na(original$Failing)] = ifelse(pred_Failing>0.5,1,0)
+}
+##ProjUnit Distribution
+hist(original$ProjUnits,breaks=60,main="Observed data",xlab="ProjUnits",freq=FALSE)
+hist(second.round$ProjUnits,breaks=60,main="Second Round Imputed data",xlab="ProjUnits",freq=FALSE)
+barplot(table(original$Failing),main="Observed data")
+barplot(table(second.round$Failing),main="Second Round Imputed data")
+summary(second.round)
+```
+## Split the data
+```{r}
+set.seed(4052)
+n <- length(second.round$Failing)
+index <- sample(1:n,0.8*n)
+second.round.train <- second.round[index,]
+second.round.test <- second.round[-index,]
+```
+
+# Logistic Regression
+```{r}
+log1.2nd <- glm(Failing~., data=second.round.train, family="binomial")
+## deviance test p-value
+pchisq(log1.2nd$deviance,217,lower.tail = FALSE)
+##Pearson chi-square test
+Pearson <- sum(residuals(log1.2nd,type = "pearson")^2)
+pchisq(Pearson,217,lower.tail = FALSE)
+##Backward Selection
+step(log1.2nd)
+##Outlier
+plot(log1.2nd,which = 5)
+
+```
+## Model After Selection
+```{r}
+log2.2nd <- glm(formula = Failing ~ ProgramArea + ProjectType + MarketRate + 
+    FamilyUnit + ProjUnits, family = "binomial", data = second.round.train)
+plot(log2.2nd,which = 5)
+## deviance test p-value
+pchisq(log2.2nd$deviance,219,lower.tail = FALSE)
+##Pearson chi-square test
+Pearson <- sum(residuals(log2.2nd,type = "pearson")^2)
+pchisq(Pearson,219,lower.tail = FALSE)
+```
+Still get 2 outliers
+
+## Tested Out Nested Model
+```{r}
+nest_log.2nd <- glm(formula = Failing ~ ProgramArea + ProjectType+ MarketRate + FamilyUnit +                     ProjUnits++I(MarketRate^2) +I(FamilyUnit^2)+I(ProjUnits^2), family = 
+                    "binomial",data = second.round.train)
+anova(log2.2nd,nest_log.2nd,test = "Chisq")
+#No nested Model
+##Quasi-Likelihood
+quasi_log.2nd <- glm(formula = Failing ~ ProgramArea + ProjectType + MarketRate + 
+                   FamilyUnit + ProjUnits, family = quasibinomial, data = 
+                     second.round.train)
+summary(quasi_log.2nd)
+```
+## Test Error Rate & ROC
+```{r}
+#Quasi Model
+##Train Error Rate
+y_train_2nd<-as.numeric(second.round.train[,1])-1
+y_test_2nd<-as.numeric(second.round.test[,1])-1
+pi_logit_train<-predict(quasi_log.2nd, second.round.train,type="response")
+y_logit_train<-ifelse(pi_logit_train>0.5,1,0)
+ER_logit_train<-mean((y_train_2nd-y_logit_train)^2)
+ER_logit_train
+#Training ROC
+library(ROCR)
+pred_logit_train<-prediction(pi_logit_train, y_train_2nd)
+perf_logit_train <- performance(pred_logit_train,"tpr","fpr")
+plot(perf_logit_train,colorize=TRUE,main="Quasi Logistic Training")
+AUC_logit_train<-performance(pred_logit_train,"auc")@y.values[[1]]
+AUC_logit_train
+
+##Test Error Rate
+pi_logit_test<-predict(quasi_log.2nd, second.round.test,type="response")
+y_logit_test<-ifelse(pi_logit_test>0.5,1,0)
+ER_logit_test<-mean((y_test_2nd-y_logit_test)^2)
+ER_logit_test
+#Testing ROC
+pred_logit_test<-prediction(pi_logit_test, y_test_2nd)
+perf_logit_test <- performance(pred_logit_test,"tpr","fpr")
+plot(perf_logit_test,colorize=TRUE,main="Quasi Logistic Testing")
+AUC_logit_test<-performance(pred_logit_test,"auc")@y.values[[1]]
+AUC_logit_test
+```
+# KNN
+## Transforming data into dummies
+### Training set
+```{r}
+#Project Type
+second.round.train$ProjectType <- as.factor(second.round.train$ProjectType)
+ff<-second.round.train$ProjectType
+ll<-levels(ff)
+X.pt<-rep(0,(dim(second.round.train)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  X.pt<-cbind(X.pt,dummy)
+}
+X.pt<-X.pt[,-1]
+colnames(X.pt) <- c("New Construction","Rehabilitation")
+
+#Program area
+second.round.train$ProgramArea <- as.factor(second.round.train$ProgramArea)
+ff<-second.round.train$ProgramArea  
+ll<-levels(ff)
+X.pa<-rep(0,(dim(second.round.train)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  X.pa<-cbind(X.pa,dummy)
+}
+X.pa<-X.pa[,-1]
+colnames(X.pa) <- c("Bonds Only","HOPE SF","Inclusionary","Inclusionary-OCII","Multifamily"                      ,"RAD Phase 1","RAD Phase 2","Small Sites" )
+
+#Housing Tenure
+second.round.train$HousingTenure <- as.factor(second.round.train$HousingTenure)
+ff<-second.round.train$HousingTenure  
+ll<-levels(ff)
+X.ht<-rep(0,(dim(second.round.train)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  X.ht<-cbind(X.ht,dummy)
+}
+X.ht<-X.ht[,-1]
+colnames(X.ht) <- c("Ownership","Rental","Unknown")
+X.train <- cbind(X.ht,X.pa,X.pt,second.round.train$MarketRate,second.round.train$FamilyUnit,
+                 second.round.train$ProjUnits)
+colnames(X.train)[c(14,15,16)] <- c("MarketRate","FamilyUnit","ProjUnits")
+Failing.train <- second.round.train$Failing
+```
+
+### Testing Set
+```{r}
+#Project Type
+second.round.test$ProjectType <- as.factor(second.round.test$ProjectType)
+ff<-second.round.test$ProjectType
+ll<-levels(ff)
+Z.pt<-rep(0,(dim(second.round.test)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  Z.pt<-cbind(Z.pt,dummy)
+}
+Z.pt<-Z.pt[,-1]
+colnames(Z.pt) <- c("New Construction","Rehabilitation")
+
+#Program area
+second.round.test$ProgramArea <- as.factor(second.round.test$ProgramArea)
+ff<-second.round.test$ProgramArea  
+ll<-levels(ff)
+Z.pa<-rep(0,(dim(second.round.test)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  Z.pa<-cbind(Z.pa,dummy)
+}
+Z.pa<-Z.pa[,-1]
+colnames(Z.pa) <- c("Bonds Only","HOPE SF","Inclusionary","Inclusionary-OCII","Multifamily"                      ,"RAD Phase 1","RAD Phase 2","Small Sites" )
+
+#Housing Tenure
+second.round.test$HousingTenure <- as.factor(second.round.test$HousingTenure)
+ff<-second.round.test$HousingTenure  
+ll<-levels(ff)
+Z.ht<-rep(0,(dim(second.round.test)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  Z.ht<-cbind(Z.ht,dummy)
+}
+Z.ht<-Z.ht[,-1]
+colnames(Z.ht) <- c("Ownership","Rental","Unknown")
+Z.test <- cbind(Z.ht,Z.pa,Z.pt,second.round.test$MarketRate,second.round.test$FamilyUnit,
+                 second.round.test$ProjUnits)
+colnames(Z.test)[c(14,15,16)] <- c("MarketRate","FamilyUnit","ProjUnits")
+```
+ 
+## Classification
+```{r}
+library(class)
+#K=3
+knn3 <- knn(X.train,Z.test,cl=second.round.train$Failing,k=3)
+table(second.round.test$Failing, knn3)
+##test error
+mean(second.round.test$Failing!=knn3)
+
+#K=5
+knn5 <- knn(X.train,Z.test,cl=second.round.train$Failing,k=5)
+table(second.round.test$Failing, knn5)
+##test error
+mean(second.round.test$Failing!=knn5)
+
+#K=10
+knn10 <- knn(X.train,Z.test,cl=second.round.train$Failing,k=10)
+table(second.round.test$Failing, knn10)
+##test error
+mean(second.round.test$Failing!=knn10)
+```
+## Cross Validation
+### Transform Variables into Dummies
+```{r}
+#Project Type
+second.round$ProjectType <- as.factor(second.round$ProjectType)
+ff<-second.round$ProjectType
+ll<-levels(ff)
+CV.pt<-rep(0,(dim(second.round)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  CV.pt<-cbind(CV.pt,dummy)
+}
+CV.pt<-CV.pt[,-1]
+colnames(CV.pt) <- c("New Construction","Rehabilitation")
+
+#Program area
+second.round$ProgramArea <- as.factor(second.round$ProgramArea)
+ff<-second.round$ProgramArea  
+ll<-levels(ff)
+CV.pa<-rep(0,(dim(second.round)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  CV.pa<-cbind(CV.pa,dummy)
+}
+CV.pa<-CV.pa[,-1]
+colnames(CV.pa) <- c("Bonds Only","HOPE SF","Inclusionary","Inclusionary-OCII","Multifamily"                      ,"RAD Phase 1","RAD Phase 2","Small Sites" )
+
+#Housing Tenure
+second.round$HousingTenure <- as.factor(second.round$HousingTenure)
+ff<-second.round$HousingTenure  
+ll<-levels(ff)
+CV.ht<-rep(0,(dim(second.round)[1]))
+for(i in 1:length(ll)){
+  dummy<-ifelse(ff==ll[i],1,0)
+  CV.ht<-cbind(CV.ht,dummy)
+}
+CV.ht<-CV.ht[,-1]
+colnames(CV.ht) <- c("Ownership","Rental","Unknown")
+CV.KNN <- cbind(CV.ht,CV.pa,CV.pt,second.round$MarketRate,second.round$FamilyUnit,
+                second.round$ProjUnits)
+colnames(CV.KNN)[c(14,15,16)] <- c("MarketRate","FamilyUnit","ProjUnits")
+```
+
+### Validate
+```{r}
+set.seed(2021)
+nfolds=10
+library(caret)
+fold=createFolds(1:nrow(second.round),k=nfolds,list=FALSE)
+kCV_err=rep(0,3)
+for(i in 1:nfolds)
+{
+  pre3.CV=knn(CV.KNN[fold !=i,],CV.KNN[fold ==i,],cl=second.round$Failing[fold!=i],k=3)
+  pre5.CV=knn(CV.KNN[fold !=i,],CV.KNN[fold ==i,],cl=second.round$Failing[fold!=i],k=5)
+  pre10.CV=knn(CV.KNN[fold !=i,],CV.KNN[fold ==i,],cl=second.round$Failing[fold!=i],k=10)
+  kCV_err[1]=kCV_err[1]+mean(pre3.CV!=second.round$Failing[fold==i])/nfolds
+  kCV_err[2]=kCV_err[2]+mean(pre5.CV!=second.round$Failing[fold==i])/nfolds
+  kCV_err[3]=kCV_err[3]+mean(pre10.CV!=second.round$Failing[fold==i])/nfolds
+}
+data.frame(k=c(3,5,10),CV_error=kCV_err)
+```
+## ROC & AUC
+```{r}
+##Training
+failing_pi_knn_train<-attr(knn(X.train,X.train,second.round.train$Failing,
+                               k=10,prob=TRUE),"prob")
+failing_class <- knn(X.train,X.train,second.round.train$Failing,k=10)
+pi_knn_train<-ifelse(failing_class==1,failing_pi_knn_train,1-failing_pi_knn_train)
+y_knn_train<-ifelse(pi_knn_train>0.5,1,0)
+ER_knn_train<-mean((y_train_2nd-y_knn_train)^2)
+ER_knn_train
+pred_knn_train <- prediction(pi_knn_train, y_train_2nd)
+perf_knn_train <- performance(pred_knn_train,"tpr","fpr")
+plot(perf_knn_train,colorize=TRUE,main="KNN Train")
+AUC_knn_train<-performance(pred_knn_train,"auc")@y.values[[1]]
+AUC_knn_train
+
+
+##Testing 
+failing_pi_knn_test<-as.numeric(attr(knn(X.train,Z.test,second.round.train$Failing,
+                                         k=10,prob=TRUE),"prob"))
+
+failing_class <- knn(X.train,Z.test,second.round.train$Failing,k=10)
+pi_knn_test<-ifelse(failing_class==1,failing_pi_knn_test,1-failing_pi_knn_test)
+y_knn_test<- ifelse(pi_knn_test>0.5,1,0)
+ER_knn_test<-mean((y_test_2nd-y_knn_test)^2)
+ER_knn_test
+pred_knn_test <- prediction(pi_knn_test, y_test_2nd)
+perf_knn_test <- performance(pred_knn_test,"tpr","fpr")
+plot(perf_knn_test,colorize=TRUE,main="KNN Test")
+AUC_knn_test<-performance(pred_knn_test,"auc")@y.values[[1]]
+AUC_knn_test
+```
+# Desision Tree
+```{r}
+second.round.train$Failing <- as.factor(second.round.train$Failing)
+second.round.test$Failing <- as.factor(second.round.test$Failing)
+library(tree)
+tree1.2nd <- tree(Failing~., data = second.round.train)
+plot(tree1.2nd)
+text(tree1.2nd,pretty=0)
+#Prune
+##cv.tree
+m2 <- cv.tree(tree1.2nd,FUN=prune.misclass)
+plot(m2$size, m2$dev, type="b",xlab="Tree Size",ylab="Misclassification error")
+tree2.2nd <- prune.misclass(tree1.2nd,best=3)
+plot(tree2.2nd)
+text(tree2.2nd,pretty=0)
+```
+
+## Error Rate, ROC and AUC
+```{r}
+##Training Error Rate
+pi_dt_train_2nd <- predict(tree2.2nd,second.round.train)
+y_dt_train_2nd <- ifelse(pi_dt_train_2nd[,2]>0.5,1,0)
+ER_dt_train_2nd<-mean((y_train_2nd-y_dt_train_2nd)^2)
+ER_dt_train_2nd
+#Training ROC
+pred_dt_train<-prediction(pi_dt_train_2nd[,2], y_train_2nd)
+perf_dt_train <- performance(pred_dt_train,"tpr","fpr")
+plot(perf_dt_train,colorize=TRUE,main="Decision Tree Training")
+AUC_dt_train<-performance(pred_dt_train,"auc")@y.values[[1]]
+AUC_dt_train
+
+##Testing Error Rate
+pi_dt_test_2nd <- predict(tree2.2nd,second.round.test)
+y_dt_test_2nd <- ifelse(pi_dt_test_2nd[,2]>0.5,1,0)
+ER_dt_test_2nd<-mean((y_test_2nd-y_dt_test_2nd)^2)
+ER_dt_test_2nd
+#Testing ROC
+pred_dt_test<-prediction(pi_dt_test_2nd[,2], y_test_2nd)
+perf_dt_test <- performance(pred_dt_test,"tpr","fpr")
+plot(perf_dt_test,colorize=TRUE,main="Decision Tree Testing")
+AUC_dt_test<-performance(pred_dt_test,"auc")@y.values[[1]]
+AUC_dt_test
+```
+
+# Random Forest
+```{r}
+library(randomForest)
+forest_2nd <- randomForest(Failing~., data = second.round.train,mtry = 1,importance=TRUE)
+forest.pred <- predict(forest_2nd,second.round.test)
+mean(forest.pred != second.round.test$Failing)
+varImpPlot(forest_2nd)
+```
+
+## Error Rate, ROC & AUC
+```{r}
+##Training Error Rate
+pi_rf_train_2nd <- predict(forest_2nd,second.round.train, type = "prob")
+y_rf_train_2nd <- ifelse(pi_rf_train_2nd[,2]>0.5,1,0)
+ER_rf_train_2nd<-mean((y_train_2nd-y_rf_train_2nd)^22)
+ER_rf_train_2nd
+#Training ROC
+pred_rf_train_2nd<-prediction(pi_rf_train_2nd[,2], y_train_2nd)
+perf_rf_train_2nd <- performance(pred_rf_train_2nd,"tpr","fpr")
+plot(perf_rf_train,colorize=TRUE,main="Random Forest Training")
+AUC_rf_train<-performance(pred_rf_train_2nd,"auc")@y.values[[1]]
+AUC_rf_train
+
+
+##Testing Error Rate
+pi_rf_test_2nd <- predict(forest_2nd,second.round.test, type = "prob")
+y_rf_test_2nd <- ifelse(pi_rf_test_2nd[,2]>0.5,1,0)
+ER_rf_test<-mean((y_test_2nd-y_rf_test_2nd)^2)
+ER_rf_test
+#Testing ROC
+pred_rf_test_2nd<-prediction(pi_rf_test_2nd[,2], y_test_2nd)
+perf_rf_test_2nd <- performance(pred_rf_test_2nd,"tpr","fpr")
+plot(perf_rf_test_2nd,colorize=TRUE,main="Random Forest Testing")
+AUC_rf_test<-performance(pred_rf_test_2nd,"auc")@y.values[[1]]
+AUC_rf_test
+```
+
+
